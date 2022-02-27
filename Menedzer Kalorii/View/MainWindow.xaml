@@ -1,0 +1,64 @@
+﻿<Window x:Class="Menedzer_Kalorii.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menedzer_Kalorii"
+        mc:Ignorable="d"
+        Name="mainWindow"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Grid DockPanel.Dock="Top" Background="#46a88f">
+                <Label>Czas</Label>
+            </Grid>
+            <Grid DockPanel.Dock="Left" Background="#22242d">
+                <TabControl TabStripPlacement="Left">
+                    <TabItem Header="Aktualności" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem IsEnabled="False" IsHitTestVisible="False"/>
+                    <TabItem Header="BMI" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Sprawdź kalorie" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Zaplanuj posiłek" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem IsEnabled="False" IsHitTestVisible="False"/>
+                    <TabItem Header="Spalanie kalorii" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Zaplanuj ćwiczenia" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Przepisy" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem IsEnabled="False" IsHitTestVisible="False"/>
+                    <TabItem Header="Polecane" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
