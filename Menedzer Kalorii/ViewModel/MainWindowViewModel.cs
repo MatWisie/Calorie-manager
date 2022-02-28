@@ -1,10 +1,13 @@
-﻿using Menedzer_Kalorii.Model;
+﻿using Menedzer_Kalorii.Commands;
+using Menedzer_Kalorii.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Menedzer_Kalorii.ViewModel
 {
@@ -20,8 +23,10 @@ namespace Menedzer_Kalorii.ViewModel
 
         MainWindowModel Model = new MainWindowModel();
 
-       public MainWindowViewModel()
+        public MainWindowViewModel()
         {
+            calculateBmiCommand = new RelayCommand(CalculateBmi);
+
             date = DateTime.Now.Date;
         }
 
@@ -58,13 +63,18 @@ namespace Menedzer_Kalorii.ViewModel
         }
         public double BMI
         {
-            get { return weight / height; }
-            set 
-            { 
-                BMI = value;
+            get { return (double)Model._bmi; }
+            set
+            {
+                Model._bmi = value;
                 OnPropertyChanged();
             }
         }
 
+        public ICommand calculateBmiCommand { get; set; }
+        private void CalculateBmi(object obj)
+        {
+            BMI = height / weight;
+        }
     }
 }

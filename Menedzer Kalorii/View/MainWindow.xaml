@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         xmlns:local="clr-namespace:Menedzer_Kalorii"
         mc:Ignorable="d"
         Name="mainWindow"
@@ -26,9 +27,14 @@
                         <Grid Background="#1c1e22">
                             <StackPanel Orientation="Vertical">
                                 <Label Foreground="White" Content="Wysokość [m]" HorizontalAlignment="Center"/>
-                                <TextBox Margin="20 0 20 0"/>
+                                <wpfTool:DecimalUpDown Margin="50 0 50 0" Value="{Binding height, Mode=TwoWay}" Minimum="0"/>
                                 <Label Foreground="White" Content="Waga [kg]" HorizontalAlignment="Center"/>
-                                <TextBox Margin="50 0 50 0"/>
+                                <wpfTool:DecimalUpDown Margin="50 0 50 0" Value="{Binding weight, Mode=TwoWay}" Minimum="0"/>
+                                <Button Content="Zmierz BMI" Width="100" Margin="0 20 0 0" Command="{Binding calculateBmiCommand}"/>
+                                <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Run Text="Twoje BMI to: "/>
+                                    <Run Text="{Binding BMI}"/>
+                                </TextBlock>
                             </StackPanel>
                         </Grid>
                     </TabItem>
