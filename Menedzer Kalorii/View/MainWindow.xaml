@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:Menedzer_Kalorii"
         mc:Ignorable="d"
         Name="mainWindow"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
         <DockPanel LastChildFill="True">
-            <Grid DockPanel.Dock="Top" Background="#46a88f">
-                <Label>Czas</Label>
+            <Grid DockPanel.Dock="Top" Background="DarkSlateGray" >
+                <Rectangle Fill="Black" Panel.ZIndex="1" Opacity="0.2"/>
+                <Image Source="/Images/bg.png" Stretch="Fill" Height="60" Panel.ZIndex="0"/>
+                <Label VerticalAlignment="Center" HorizontalAlignment="Right" Content="{Binding date}" Foreground="Cyan" FontSize="15" FontWeight="Bold"/>
             </Grid>
             <Grid DockPanel.Dock="Left" Background="#22242d">
                 <TabControl TabStripPlacement="Left">
@@ -22,7 +24,12 @@
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
                     <TabItem Header="BMI" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <StackPanel Orientation="Vertical">
+                                <Label Foreground="White" Content="Wysokość [m]" HorizontalAlignment="Center"/>
+                                <TextBox Margin="20 0 20 0"/>
+                                <Label Foreground="White" Content="Waga [kg]" HorizontalAlignment="Center"/>
+                                <TextBox Margin="50 0 50 0"/>
+                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Sprawdź kalorie" Style="{StaticResource TabItemStyle}">
@@ -52,7 +59,17 @@
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
+                    <TabItem Header="Wiadomości sportowe" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
                     <TabItem Header="Polecane" Style="{StaticResource TabItemStyle}">
+                        <Grid Background="#1c1e22">
+                            <Label>blabla</Label>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Kontakt" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
                             <Label>blabla</Label>
                         </Grid>
