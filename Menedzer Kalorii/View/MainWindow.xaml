@@ -26,21 +26,34 @@
                     <TabItem Header="BMI" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
                             <StackPanel Orientation="Vertical">
-                                <Label Foreground="White" Content="Wysokość [m]" HorizontalAlignment="Center"/>
-                                <wpfTool:DecimalUpDown Margin="50 0 50 0" Value="{Binding height, Mode=TwoWay}" Minimum="0"/>
+                                <Label Foreground="White" Content="Wzrost [m]" HorizontalAlignment="Center"/>
+                                <wpfTool:DecimalUpDown Margin="250 0 250 0" Value="{Binding height, Mode=TwoWay}" Minimum="0" MaxWidth="300" Background="Black" Foreground="White"/>
                                 <Label Foreground="White" Content="Waga [kg]" HorizontalAlignment="Center"/>
-                                <wpfTool:DecimalUpDown Margin="50 0 50 0" Value="{Binding weight, Mode=TwoWay}" Minimum="0"/>
+                                <wpfTool:DecimalUpDown Margin="250 0 250 0" Value="{Binding weight, Mode=TwoWay}" Minimum="0" MaxWidth="300" Background="Black" Foreground="White"/>
                                 <Button Content="Zmierz BMI" Width="100" Margin="0 20 0 0" Command="{Binding calculateBmiCommand}"/>
-                                <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Run Text="Twoje BMI to: "/>
-                                    <Run Text="{Binding BMI}"/>
-                                </TextBlock>
+                                <TextBlock Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding BMI}"/>
+                                <Border Background="Black" BorderThickness="2" BorderBrush="Gray">
+                                    <TextBlock Text="{Binding verdict}" Foreground="White" TextWrapping="Wrap" FontSize="15"/>
+                                </Border>
+                                <TextBlock Foreground="White" Margin="0 20 0 0" Text="Kalkulator BMI (Body Mass Index) daje każdemu możliwość szybkiego i wygodego obliczenia własnego wskaźnika masy ciała. BMI obliczamy dzieląc masę ciała (w kilogramach) przez wzrost do kwadratu (w metrach). Wskaźnik ten wykorzystywany jest przede wszystkim do oceny ryzyka pojawienia się groźnych chorób: miażdżycy, choroby niedokrwiennej serca, udaru mózgu, czy nawet nowotworów. Większość tych chorób jest związana z otyłością i dlatego kalkulator BMI to tak przydatne narzędzie." TextWrapping="Wrap" FontSize="17"/>
                             </StackPanel>
+                            <Image Source="/Images/bmi.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150"/>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Sprawdź kalorie" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Menu HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <MenuItem Header="WYBIERZ">
+                                    <MenuItem Header="Owoce">
+                                        <MenuItem Header="Jabłko"/>
+                                        <MenuItem Header="Banan"/>
+                                    </MenuItem>
+                                    <MenuItem Header="Warzywa">
+                                        <MenuItem Header="Marchew"/>
+                                        <MenuItem Header="Ziemniak"/>
+                                    </MenuItem>
+                                </MenuItem>
+                            </Menu>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Zaplanuj posiłek" Style="{StaticResource TabItemStyle}">

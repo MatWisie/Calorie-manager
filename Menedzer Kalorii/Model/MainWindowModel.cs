@@ -13,5 +13,6 @@ namespace Menedzer_Kalorii.Model
         public double _weight;
         public double _height;
         public double? _bmi = null;
+        public string _verdict = null;
     }
 }

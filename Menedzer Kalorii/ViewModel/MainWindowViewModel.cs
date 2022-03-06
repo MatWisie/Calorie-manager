@@ -71,10 +71,47 @@ namespace Menedzer_Kalorii.ViewModel
             }
         }
 
+        public string verdict
+        {
+            get { return Model._verdict; }
+            set
+            {
+                Model._verdict = value;
+                OnPropertyChanged();
+            }
+        }
         public ICommand calculateBmiCommand { get; set; }
         private void CalculateBmi(object obj)
         {
-            BMI = height / weight;
+            BMI = Math.Round(weight/Math.Pow(height,2),2);
+            if (BMI < 16)
+            {
+                verdict = "Wartość: WYGŁODZENIE \n Życie takiej osoby jest zagrożone, musisz zadbać o siebie, zacząć więcej jeść i przybrać wagi. W razie problemów polecamy udać się do specjalisty.";
+            }
+            if (BMI < 16.99 && BMI > 16)
+            {
+                verdict = "Wartość: WYCHUDZENIE \n Stan ten jest niezdrowy dla twojego ciała. Zalecamy przemyślenie swojej diety i nabrania wagi. W razie problemów polecamy udać się do specjalisty lub skorzystać z naszego kalkulatora kalorii";
+            }
+            if (BMI < 18.49 && BMI > 17)
+            {
+                verdict = "Wartość: NIEDOWAGA \n Twoja waga jest za niska, lecz nie jesteś tak daleko od wagi prawidłowej. Zalecamy nabrania wagi. Zalecamy przemyślenie swojej diety. W razie problemów polecamy skorzystać z naszego kalkulatora kalorii";
+            }
+            if (BMI < 24.99 && BMI > 25)
+            {
+                verdict = "Wartość: WAGA PRAWIDŁOWA \n Twoja waga jest prawidłowa, tak trzymaj. Utrzymaj ten stan poprzez zdrowe odżywianie i regularne ćwiczenia.";
+            }
+            if (BMI < 29.99 && BMI > 25)
+            {
+                verdict = "Wartość: NADWAGA \n Ważysz za dużo, przemyśl swoją dietę, ćwicz regularnie i zrzuć parę kilo aby wrócić do wagi prawidłowej.";
+            }
+            if (BMI < 39.99 && BMI > 30)
+            {
+                verdict = "Wartość: OTYŁOŚĆ \n Stan ten jest niezdrowy dla twojego ciała. Zalecamy przemyślenie swojej diety i stracenia wagi poprzez zdrowe odżywianie i regularne ćwiczenia. W razie problemów polecamy udać się do specjalisty lub skorzystać z naszego kalkulatora kalorii oraz planowania ćwiczeń";
+            }
+            if (BMI > 40)
+            {
+                verdict = "Wartość: OTYŁOŚĆ SKRAJNA \n Życie takiej osoby jest zagrożone, musisz zadbać o siebie, zacząć mniej jeść i starcić wagi, w przeciwnym razie stan ten może mieć przykre konsekwencje. W razie problemów polecamy udać się do specjalisty.";
+            }
         }
     }
 }
