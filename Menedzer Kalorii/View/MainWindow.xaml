@@ -54,7 +54,7 @@
                                     </ItemsPanelTemplate>
                                 </Menu.ItemsPanel>
                                 <MenuItem Header="Warzywa" Style="{StaticResource MenuItemStyle}">
-                                    <MenuItem Header="Bakłażan" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Bakłażan" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                     <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}"/>
                                     <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}"/>
                                     <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}"/>
@@ -76,6 +76,10 @@
                                     <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}"/>
                                 </MenuItem>
                             </Menu>
+                            <StackPanel Grid.Column="1">
+                                <ListBox Margin="20 0 20 0" Background="#272933" Foreground="White" MinHeight="300" ItemsSource="{Binding Path=_foodList}"/>
+                                <Label Content="Kcal goes here" Background="#272933" Foreground="White" Margin="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Zaplanuj posiłek" Style="{StaticResource TabItemStyle}">

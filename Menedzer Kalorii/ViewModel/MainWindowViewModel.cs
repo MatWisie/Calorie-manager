@@ -2,6 +2,7 @@
 using Menedzer_Kalorii.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -22,10 +23,10 @@ namespace Menedzer_Kalorii.ViewModel
         }
 
         MainWindowModel Model = new MainWindowModel();
-
         public MainWindowViewModel()
         {
             calculateBmiCommand = new RelayCommand(CalculateBmi);
+            calculateFoodKcalCommand = new RelayCommand(calculateFoodKcal);
 
             date = DateTime.Now.Date;
         }
@@ -113,5 +114,27 @@ namespace Menedzer_Kalorii.ViewModel
                 verdict = "Wartość: OTYŁOŚĆ SKRAJNA \n Życie takiej osoby jest zagrożone, musisz zadbać o siebie, zacząć mniej jeść i starcić wagi, w przeciwnym razie stan ten może mieć przykre konsekwencje. W razie problemów polecamy udać się do specjalisty.";
             }
         }
+
+        public ObservableCollection<string> _foodList
+        {
+            get
+            {
+                return Model.foodList;
+            }
+            set
+            {
+                Model.foodList = value;
+            }
+        }
+
+        public ICommand calculateFoodKcalCommand { get; set; }
+        private void calculateFoodKcal(object obj)
+        {
+            _foodList.Add((string)obj);
+        }
+
+
+
+
     }
 }
