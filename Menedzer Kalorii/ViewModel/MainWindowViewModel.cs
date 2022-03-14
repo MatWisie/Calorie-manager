@@ -27,8 +27,11 @@ namespace Menedzer_Kalorii.ViewModel
         {
             calculateBmiCommand = new RelayCommand(CalculateBmi);
             calculateFoodKcalCommand = new RelayCommand(calculateFoodKcal);
+            kcalDefining kcalDefining = new kcalDefining();
 
             date = DateTime.Now.Date;
+
+            _kcal = 0;
         }
 
 
@@ -127,10 +130,25 @@ namespace Menedzer_Kalorii.ViewModel
             }
         }
 
+        public double _kcal
+        {
+            get
+            {
+                return Math.Round(Model.kcal,2);
+            }
+            set
+            {
+                Model.kcal = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand calculateFoodKcalCommand { get; set; }
         private void calculateFoodKcal(object obj)
         {
             _foodList.Add((string)obj);
+            _kcal += kcalDefining.define((string)obj);
+
         }
 
 

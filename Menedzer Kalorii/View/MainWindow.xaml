@@ -19,7 +19,7 @@
                 <TabControl TabStripPlacement="Left">
                     <TabItem Header="Aktualności" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
@@ -78,45 +78,45 @@
                             </Menu>
                             <StackPanel Grid.Column="1">
                                 <ListBox Margin="20 0 20 0" Background="#272933" Foreground="White" MinHeight="300" ItemsSource="{Binding Path=_foodList}"/>
-                                <Label Content="Kcal goes here" Background="#272933" Foreground="White" Margin="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                                <Label Content="{Binding _kcal}" Background="#272933" Foreground="White" Margin="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                             </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Zaplanuj posiłek" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
                     <TabItem Header="Spalanie kalorii" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Zaplanuj ćwiczenia" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Przepisy" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
                     <TabItem Header="Wiadomości sportowe" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Polecane" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Kontakt" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label>blabla</Label>
+                            <Label></Label>
                         </Grid>
                     </TabItem>
                 </TabControl>
