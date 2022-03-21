@@ -17,5 +17,6 @@ namespace Menedzer_Kalorii.Model
         public string _verdict = null;
         public ObservableCollection<string> foodList = new ObservableCollection<string>(){};
         public double kcal;
+        public int grams;
     }
 }

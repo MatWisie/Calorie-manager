@@ -142,12 +142,26 @@ namespace Menedzer_Kalorii.ViewModel
                 OnPropertyChanged();
             }
         }
-
-        public ICommand calculateFoodKcalCommand { get; set; }
-        private void calculateFoodKcal(object obj)
+        public int _grams
         {
-            _foodList.Add((string)obj);
-            _kcal += kcalDefining.define((string)obj);
+            get
+            {
+                return Model.grams;
+            }
+            set
+            {
+                Model.grams = value;
+                OnPropertyChanged();
+            }
+        }
+        public ICommand calculateFoodKcalCommand { get; set; }
+        public void calculateFoodKcal(object obj)
+        {
+            AmountWindow amountwindow = new AmountWindow();
+            amountwindow.ShowDialog();
+            _grams = (int)amountwindow.gramsUpDown.Value;
+            _foodList.Add((string)obj + " " + _grams + " gram");
+            _kcal += kcalDefining.define((string)obj) * _grams;
 
         }
 
