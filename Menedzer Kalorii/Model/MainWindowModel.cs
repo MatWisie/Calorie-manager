@@ -18,5 +18,8 @@ namespace Menedzer_Kalorii.Model
         public ObservableCollection<string> foodList = new ObservableCollection<string>(){};
         public double kcal;
         public int grams;
+        public string selectedcategory;
+        public ObservableCollection<string> breakfastList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> lunchList = new ObservableCollection<string>() { };
     }
 }

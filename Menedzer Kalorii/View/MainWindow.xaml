@@ -84,7 +84,58 @@
                     </TabItem>
                     <TabItem Header="Zaplanuj posiłek" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label></Label>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="363*"/>
+                                <RowDefinition Height="140*"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Śniadanie" Margin="10">
+                                <GroupBox.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="breakfast"/>
+                                </GroupBox.InputBindings>
+                                <ListView ItemsSource="{Binding _breakfastList}"/>
+                            </GroupBox>
+                            <GroupBox Header="Obiad" Margin="10" Grid.Column="1">
+                                <GroupBox.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="lunch"/>
+                                </GroupBox.InputBindings>
+                                <ListView ItemsSource="{Binding _lunchList}"/>
+                            </GroupBox>
+                            <GroupBox Header="Kolacja" Margin="10" Grid.Column="2">
+                                <ListView/>
+                            </GroupBox>
+                            <Grid Grid.Row="1" Grid.ColumnSpan="3">
+                                <Menu Background="Teal">
+                                    <MenuItem Header="Warzywa" Style="{StaticResource MenuItemStyle}">
+                                        <MenuItem Header="Bakłażan" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Dynia" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Fasola" Style="{StaticResource MenuItemStyle}"/>
+                                </MenuItem>
+                                <MenuItem Header="Owoce" Style="{StaticResource MenuItemStyle}">
+                                    <MenuItem Header="Ananas" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Awokado" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Banan" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Borówka" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Brzoskwinia" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Cytryna" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Czereśnie" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Figi" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Granat" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Grejpfrut" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}"/>
+                                </MenuItem>
+                                </Menu>
+
+                            </Grid>
+                            
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>

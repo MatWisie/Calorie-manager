@@ -27,6 +27,8 @@ namespace Menedzer_Kalorii.ViewModel
         {
             calculateBmiCommand = new RelayCommand(CalculateBmi);
             calculateFoodKcalCommand = new RelayCommand(calculateFoodKcal);
+            planMealClickCommand = new RelayCommand(planMealClick);
+            addFoodCommand = new RelayCommand(addFood);
             kcalDefining kcalDefining = new kcalDefining();
 
             date = DateTime.Now.Date;
@@ -167,6 +169,77 @@ namespace Menedzer_Kalorii.ViewModel
 
 
 
+        public string _selectedcategory
+        {
+            get
+            {
+                return Model.selectedcategory;
+            }
+            set
+            {
+                Model.selectedcategory = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        public ObservableCollection<string> _breakfastList
+        {
+            get
+            {
+                return Model.breakfastList;
+            }
+            set
+            {
+                Model.breakfastList = value;
+            }
+        }
+
+        public ObservableCollection<string> _lunchList
+        {
+            get
+            {
+                return Model.lunchList;
+            }
+            set
+            {
+                Model.lunchList = value;
+            }
+        }
+
+
+
+        public ICommand planMealClickCommand { get; set; }
+
+        public void planMealClick(object obj)
+        {
+            _selectedcategory = obj.ToString();
+        }
+
+
+        ///here more ClickCommands
+
+
+
+        public ICommand addFoodCommand { get; set; }
+
+        public void addFood(object obj)
+        {
+            switch (_selectedcategory)
+            {
+                case "breakfast":
+                    _breakfastList.Add(obj.ToString());
+                    break;
+                case "lunch":
+                    _lunchList.Add(obj.ToString());
+                    break;
+
+                default:
+                    _breakfastList.Add(obj.ToString());
+                    break;
+            }
+
+        }
 
     }
 }
