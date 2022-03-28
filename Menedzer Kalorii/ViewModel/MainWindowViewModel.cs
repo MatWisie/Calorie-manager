@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Menedzer_Kalorii.ViewModel
 {
@@ -34,10 +36,8 @@ namespace Menedzer_Kalorii.ViewModel
             date = DateTime.Now.Date;
 
             _kcal = 0;
+            
         }
-
-
-
         public DateTime date
         {
             get { return Model._date; }
@@ -207,6 +207,19 @@ namespace Menedzer_Kalorii.ViewModel
             }
         }
 
+        public ObservableCollection<string> _supperList
+        {
+            get
+            {
+                return Model.supperList;
+            }
+            set
+            {
+                Model.supperList = value;
+            }
+        }
+
+
 
 
         public ICommand planMealClickCommand { get; set; }
@@ -232,6 +245,9 @@ namespace Menedzer_Kalorii.ViewModel
                     break;
                 case "lunch":
                     _lunchList.Add(obj.ToString());
+                    break;
+                case "supper":
+                    _supperList.Add(obj.ToString());
                     break;
 
                 default:

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace Menedzer_Kalorii.Model
 {
@@ -21,5 +22,6 @@ namespace Menedzer_Kalorii.Model
         public string selectedcategory;
         public ObservableCollection<string> breakfastList = new ObservableCollection<string>() { };
         public ObservableCollection<string> lunchList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> supperList = new ObservableCollection<string>() { };
     }
 }

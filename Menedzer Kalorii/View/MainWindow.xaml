@@ -97,7 +97,7 @@
                                 <GroupBox.InputBindings>
                                     <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="breakfast"/>
                                 </GroupBox.InputBindings>
-                                <ListView ItemsSource="{Binding _breakfastList}"/>
+                                <ListView ItemsSource="{Binding _breakfastList}" Background="{Binding background}"/>
                             </GroupBox>
                             <GroupBox Header="Obiad" Margin="10" Grid.Column="1">
                                 <GroupBox.InputBindings>
@@ -106,7 +106,10 @@
                                 <ListView ItemsSource="{Binding _lunchList}"/>
                             </GroupBox>
                             <GroupBox Header="Kolacja" Margin="10" Grid.Column="2">
-                                <ListView/>
+                                <GroupBox.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="supper"/>
+                                </GroupBox.InputBindings>
+                                <ListView ItemsSource="{Binding _supperList}"/>
                             </GroupBox>
                             <Grid Grid.Row="1" Grid.ColumnSpan="3">
                                 <Menu Background="Teal">
