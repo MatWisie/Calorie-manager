@@ -33,6 +33,10 @@ namespace Menedzer_Kalorii.ViewModel
             addFoodCommand = new RelayCommand(addFood);
             kcalDefining kcalDefining = new kcalDefining();
 
+            _breakfastBackground = Brushes.White;
+            _lunchBackground = Brushes.White;
+            _supperBackground = Brushes.White;
+
             date = DateTime.Now.Date;
 
             _kcal = 0;
@@ -220,6 +224,38 @@ namespace Menedzer_Kalorii.ViewModel
         }
 
 
+        
+
+        public Brush _breakfastBackground
+        {
+            get { return Model.breakfastBackground; }
+            set
+            {
+                Model.breakfastBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        public Brush _lunchBackground
+        {
+            get { return Model.lunchBackground; }
+            set
+            {
+                Model.lunchBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Brush _supperBackground
+        {
+            get { return Model.supperBackground; }
+            set
+            {
+                Model.supperBackground = value;
+                OnPropertyChanged();
+            }
+        }
 
 
         public ICommand planMealClickCommand { get; set; }
@@ -227,6 +263,24 @@ namespace Menedzer_Kalorii.ViewModel
         public void planMealClick(object obj)
         {
             _selectedcategory = obj.ToString();
+            switch (_selectedcategory)
+            {
+                case "breakfast":
+                    _breakfastBackground = Brushes.Gray;
+                    _lunchBackground = Brushes.White;
+                    _supperBackground = Brushes.White;
+                    break;
+                case "lunch":
+                    _breakfastBackground = Brushes.White;
+                    _lunchBackground = Brushes.Gray;
+                    _supperBackground = Brushes.White;
+                    break;
+                case "supper":
+                    _breakfastBackground = Brushes.White;
+                    _lunchBackground = Brushes.White;
+                    _supperBackground = Brushes.Gray;
+                    break;
+            }
         }
 
 

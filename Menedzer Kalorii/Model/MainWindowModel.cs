@@ -23,5 +23,8 @@ namespace Menedzer_Kalorii.Model
         public ObservableCollection<string> breakfastList = new ObservableCollection<string>() { };
         public ObservableCollection<string> lunchList = new ObservableCollection<string>() { };
         public ObservableCollection<string> supperList = new ObservableCollection<string>() { };
+        public Brush breakfastBackground;
+        public Brush lunchBackground;
+        public Brush supperBackground;
     }
 }

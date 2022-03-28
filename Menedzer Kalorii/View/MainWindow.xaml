@@ -97,19 +97,19 @@
                                 <GroupBox.InputBindings>
                                     <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="breakfast"/>
                                 </GroupBox.InputBindings>
-                                <ListView ItemsSource="{Binding _breakfastList}" Background="{Binding background}"/>
+                                <ListView ItemsSource="{Binding _breakfastList}" Background="{Binding _breakfastBackground}"/>
                             </GroupBox>
                             <GroupBox Header="Obiad" Margin="10" Grid.Column="1">
                                 <GroupBox.InputBindings>
                                     <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="lunch"/>
                                 </GroupBox.InputBindings>
-                                <ListView ItemsSource="{Binding _lunchList}"/>
+                                <ListView ItemsSource="{Binding _lunchList}" Background="{Binding _lunchBackground}"/>
                             </GroupBox>
                             <GroupBox Header="Kolacja" Margin="10" Grid.Column="2">
                                 <GroupBox.InputBindings>
                                     <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="supper"/>
                                 </GroupBox.InputBindings>
-                                <ListView ItemsSource="{Binding _supperList}"/>
+                                <ListView ItemsSource="{Binding _supperList}" Background="{Binding _supperBackground}"/>
                             </GroupBox>
                             <Grid Grid.Row="1" Grid.ColumnSpan="3">
                                 <Menu Background="Teal">
@@ -144,7 +144,7 @@
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
                     <TabItem Header="Spalanie kalorii" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label></Label>
+                            <Label/>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Zaplanuj ćwiczenia" Style="{StaticResource TabItemStyle}">
