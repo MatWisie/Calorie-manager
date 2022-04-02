@@ -1,9 +1,11 @@
 ﻿using Menedzer_Kalorii.Commands;
 using Menedzer_Kalorii.Model;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +33,11 @@ namespace Menedzer_Kalorii.ViewModel
             calculateFoodKcalCommand = new RelayCommand(calculateFoodKcal);
             planMealClickCommand = new RelayCommand(planMealClick);
             addFoodCommand = new RelayCommand(addFood);
+            saveMealCommand = new RelayCommand(saveMeal);
+            removeLastItemBreakfastCommand = new RelayCommand(removeLastItemBreakfast);
+            removeLastItemLunchCommand = new RelayCommand(removeLastItemLunch);
+            removeLastItemSupperCommand = new RelayCommand(removeLastItemSupper);
+
             kcalDefining kcalDefining = new kcalDefining();
 
             _breakfastBackground = Brushes.White;
@@ -286,6 +293,30 @@ namespace Menedzer_Kalorii.ViewModel
 
         ///here more ClickCommands
 
+        public ICommand removeLastItemBreakfastCommand { get; set; }
+
+        public void removeLastItemBreakfast(object obj)
+        {
+            if(_breakfastList.Count > 0)
+            _breakfastList.RemoveAt(_breakfastList.Count-1);
+        }
+
+        public ICommand removeLastItemLunchCommand { get; set; }
+
+        public void removeLastItemLunch(object obj)
+        {
+            if (_lunchList.Count > 0)
+                _lunchList.RemoveAt(_lunchList.Count - 1);
+        }
+
+
+        public ICommand removeLastItemSupperCommand { get; set; }
+
+        public void removeLastItemSupper(object obj)
+        {
+            if (_supperList.Count > 0)
+                _supperList.RemoveAt(_supperList.Count - 1);
+        }
 
 
         public ICommand addFoodCommand { get; set; }
@@ -307,6 +338,32 @@ namespace Menedzer_Kalorii.ViewModel
                 default:
                     _breakfastList.Add(obj.ToString());
                     break;
+            }
+
+        }
+
+        public string writeOut(ObservableCollection<string> foodList)
+        {
+            string result = "";
+            foreach(string food in foodList)
+            {
+                result += food + "\n";
+            }
+            return result;
+        }
+
+        public ICommand saveMealCommand { get; set; }
+
+        public void saveMeal(object obj)
+        {
+            SaveFileDialog dialog = new SaveFileDialog()
+            {
+                Filter = "Text Files(*.txt)|*.txt|All(*.*)|*"
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                File.WriteAllText(dialog.FileName, "||||||||Menedżer Kalorii|||||||| \n\n|Śniadanie| \n" + writeOut(_breakfastList) + "\n|Obiad|\n" + writeOut(_lunchList) + "\n|Kolacja|\n" + writeOut(_supperList));
             }
 
         }

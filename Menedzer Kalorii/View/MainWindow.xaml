@@ -99,23 +99,38 @@
                                 </GroupBox.InputBindings>
                                 <ListView ItemsSource="{Binding _breakfastList}" Background="{Binding _breakfastBackground}"/>
                             </GroupBox>
+                            <Button Margin="15" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#272933" Foreground="White" FontWeight="Bold" FontSize="20" Command="{Binding removeLastItemBreakfastCommand}">
+                                <Button.Content>
+                                    <Rectangle Width="40" Height="5" Fill="White" Margin="5"/>
+                                </Button.Content>
+                            </Button>
                             <GroupBox Header="Obiad" Margin="10" Grid.Column="1">
                                 <GroupBox.InputBindings>
                                     <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="lunch"/>
                                 </GroupBox.InputBindings>
                                 <ListView ItemsSource="{Binding _lunchList}" Background="{Binding _lunchBackground}"/>
                             </GroupBox>
+                            <Button Margin="15" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#272933" Foreground="White" FontWeight="Bold" FontSize="20" Command="{Binding removeLastItemLunchCommand}">
+                                <Button.Content>
+                                    <Rectangle Width="40" Height="5" Fill="White" Margin="5"/>
+                                </Button.Content>
+                            </Button>
                             <GroupBox Header="Kolacja" Margin="10" Grid.Column="2">
                                 <GroupBox.InputBindings>
                                     <MouseBinding Gesture="LeftClick" Command="{Binding planMealClickCommand}" CommandParameter="supper"/>
                                 </GroupBox.InputBindings>
                                 <ListView ItemsSource="{Binding _supperList}" Background="{Binding _supperBackground}"/>
                             </GroupBox>
+                            <Button Margin="15" Grid.Column="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#272933" Foreground="White" FontWeight="Bold" FontSize="20" Command="{Binding removeLastItemSupperCommand}">
+                                <Button.Content>
+                                    <Rectangle Width="40" Height="5" Fill="White" Margin="5"/>
+                                </Button.Content>
+                            </Button>
                             <Grid Grid.Row="1" Grid.ColumnSpan="3">
-                                <Menu Background="Teal">
+                                <Menu Background="#272933">
                                     <MenuItem Header="Warzywa" Style="{StaticResource MenuItemStyle}">
                                         <MenuItem Header="Bakłażan" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
-                                    <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                     <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}"/>
                                     <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}"/>
                                     <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}"/>
@@ -136,7 +151,7 @@
                                     <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}"/>
                                 </MenuItem>
                                 </Menu>
-
+                                <Button Content="ZAPISZ" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" Background="#545970" Foreground="White" FontSize="18" Command="{Binding saveMealCommand}"/>
                             </Grid>
                             
                         </Grid>
