@@ -159,7 +159,31 @@
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
                     <TabItem Header="Spalanie kalorii" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label/>
+                            <Grid Background="#1c1e22">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150*"/>
+                                    <ColumnDefinition Width="467*"/>
+                                </Grid.ColumnDefinitions>
+                                <Rectangle Fill="#272933" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10 0 10 0">
+                                    <Menu.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <VirtualizingStackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </Menu.ItemsPanel>
+                                    <MenuItem Header="Bieganie" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Brzuszki" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Pompki" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Skakanka" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Pływanie" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Deska" Style="{StaticResource MenuItemStyle}"/>
+                                </Menu>
+                                <StackPanel Grid.Column="1">
+                                    <ListBox Margin="20 0 20 0" Background="#272933" Foreground="White" MinHeight="300" ItemsSource="{Binding Path=_exercisesList}"/>
+                                    <Label Content="Spalone kalorie:" Foreground="White" Margin="20 0 20 0"/>
+                                    <Label Content="{Binding _burnedCalories}" Background="#272933" Foreground="White" Margin="20 0 20 0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                                </StackPanel>
+                            </Grid>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Zaplanuj ćwiczenia" Style="{StaticResource TabItemStyle}">

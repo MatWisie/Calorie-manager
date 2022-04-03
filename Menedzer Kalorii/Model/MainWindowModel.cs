@@ -26,5 +26,8 @@ namespace Menedzer_Kalorii.Model
         public Brush breakfastBackground;
         public Brush lunchBackground;
         public Brush supperBackground;
+        public int minutes;
+        public double burnedCalories;
+        public ObservableCollection<string> exercisesList = new ObservableCollection<string>() { };
     }
 }

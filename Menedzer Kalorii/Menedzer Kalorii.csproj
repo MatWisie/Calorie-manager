@@ -70,6 +70,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\burnedKcalDefining.cs" />
+    <Compile Include="Model\MinutesWindowModel.cs" />
+    <Compile Include="ViewModel\MinutesWindowViewModel.cs" />
+    <Compile Include="View\MinutesWindow.xaml.cs">
+      <DependentUpon>MinutesWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\AmountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\MinutesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

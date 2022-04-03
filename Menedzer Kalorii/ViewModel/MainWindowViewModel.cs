@@ -1,5 +1,7 @@
-﻿using Menedzer_Kalorii.Commands;
+﻿using Menedzer_Kalorii.Class;
+using Menedzer_Kalorii.Commands;
 using Menedzer_Kalorii.Model;
+using Menedzer_Kalorii.View;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -37,6 +39,7 @@ namespace Menedzer_Kalorii.ViewModel
             removeLastItemBreakfastCommand = new RelayCommand(removeLastItemBreakfast);
             removeLastItemLunchCommand = new RelayCommand(removeLastItemLunch);
             removeLastItemSupperCommand = new RelayCommand(removeLastItemSupper);
+            calculateCaloriesBurnedCommand = new RelayCommand(calculateCaloriesBurned);
 
             kcalDefining kcalDefining = new kcalDefining();
 
@@ -367,6 +370,51 @@ namespace Menedzer_Kalorii.ViewModel
             }
 
         }
+
+
+        public int _minutes
+        {
+            get { return Model.minutes; }
+            set
+            {
+                Model.minutes = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public double _burnedCalories
+        {
+            get { return Model.burnedCalories; }
+            set
+            {
+                Model.burnedCalories = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+        public ObservableCollection<string> _exercisesList
+        {
+            get
+            {
+                return Model.exercisesList;
+            }
+            set
+            {
+                Model.exercisesList = value;
+            }
+        }
+
+        public ICommand calculateCaloriesBurnedCommand { get; set; }
+        public void calculateCaloriesBurned(object obj)
+        {
+            MinutesWindow minuteswindow = new MinutesWindow();
+            minuteswindow.ShowDialog();
+            _minutes = (int)minuteswindow.gramsUpDown.Value;
+            _exercisesList.Add((string)obj + " " + _minutes + " minut");
+            _burnedCalories += burnedKcalDefining.define((string)obj) * _minutes;
+        }
+
 
     }
 }
