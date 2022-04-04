@@ -131,29 +131,29 @@
                                     <MenuItem Header="Warzywa" Style="{StaticResource MenuItemStyle}">
                                         <MenuItem Header="Bakłażan" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                         <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
-                                    <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Dynia" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Fasola" Style="{StaticResource MenuItemStyle}"/>
-                                </MenuItem>
-                                <MenuItem Header="Owoce" Style="{StaticResource MenuItemStyle}">
-                                    <MenuItem Header="Ananas" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Awokado" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Banan" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Borówka" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Brzoskwinia" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Cytryna" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Czereśnie" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Figi" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Granat" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Grejpfrut" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}"/>
-                                </MenuItem>
+                                        <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Dynia" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Fasola" Style="{StaticResource MenuItemStyle}"/>
+                                    </MenuItem>
+                                    <MenuItem Header="Owoce" Style="{StaticResource MenuItemStyle}">
+                                        <MenuItem Header="Ananas" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Awokado" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Banan" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Borówka" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Brzoskwinia" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Cytryna" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Czereśnie" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Figi" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Granat" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Grejpfrut" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}"/>
+                                    </MenuItem>
                                 </Menu>
                                 <Button Content="ZAPISZ" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" Background="#545970" Foreground="White" FontSize="18" Command="{Binding saveMealCommand}"/>
                             </Grid>
-                            
+
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
@@ -188,7 +188,43 @@
                     </TabItem>
                     <TabItem Header="Zaplanuj ćwiczenia" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label></Label>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="403*"/>
+                                <RowDefinition Height="100*"/>
+                            </Grid.RowDefinitions>
+                            <UniformGrid>
+                                <GroupBox Header="Poniedziałek">
+                                    <ListView/>
+                                </GroupBox>
+                                <GroupBox Header="Wtorek">
+                                    <ListView/>
+                                </GroupBox>
+                                <GroupBox Header="Środa">
+                                    <ListView/>
+                                </GroupBox>
+                                <GroupBox Header="Czwartek">
+                                    <ListView/>
+                                </GroupBox>
+                                <GroupBox Header="Piątek">
+                                    <ListView/>
+                                </GroupBox>
+                                <GroupBox Header="Sobota">
+                                    <ListView/>
+                                </GroupBox>
+                                <GroupBox Header="Niedziela">
+                                    <ListView/>
+                                </GroupBox>
+                                <Button Content="ZAPISZ" Height="30" Width="70" Background="#545970" Foreground="White" FontSize="18"/>
+                            </UniformGrid>
+                            <Menu Background="#272933" Grid.Row="1">
+                                <MenuItem Header="Bieganie" Style="{StaticResource MenuItemStyle}"/>
+                                <MenuItem Header="Brzuszki" Style="{StaticResource MenuItemStyle}"/>
+                                <MenuItem Header="Pompki" Style="{StaticResource MenuItemStyle}"/>
+                                <MenuItem Header="Skakanka" Style="{StaticResource MenuItemStyle}"/>
+                                <MenuItem Header="Pływanie" Style="{StaticResource MenuItemStyle}"/>
+                                <MenuItem Header="Deska" Style="{StaticResource MenuItemStyle}"/>
+
+                            </Menu>
                         </Grid>
                     </TabItem>
                     <TabItem Header="Przepisy" Style="{StaticResource TabItemStyle}">
