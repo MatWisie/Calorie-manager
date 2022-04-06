@@ -40,12 +40,21 @@ namespace Menedzer_Kalorii.ViewModel
             removeLastItemLunchCommand = new RelayCommand(removeLastItemLunch);
             removeLastItemSupperCommand = new RelayCommand(removeLastItemSupper);
             calculateCaloriesBurnedCommand = new RelayCommand(calculateCaloriesBurned);
+            exerciseChangeColorCommand = new RelayCommand(exerciseChangeColor);
 
             kcalDefining kcalDefining = new kcalDefining();
 
             _breakfastBackground = Brushes.White;
             _lunchBackground = Brushes.White;
             _supperBackground = Brushes.White;
+
+            _mondayBackground = Brushes.White;
+            _tuesdayBackground = Brushes.White;
+            _wednesdayBackground = Brushes.White;
+            _thursdayBackground = Brushes.White;
+            _fridayBackground = Brushes.White;
+            _saturdayBackground = Brushes.White;
+            _sundayBackground = Brushes.White;
 
             date = DateTime.Now.Date;
 
@@ -415,6 +424,162 @@ namespace Menedzer_Kalorii.ViewModel
             _burnedCalories += burnedKcalDefining.define((string)obj) * _minutes;
         }
 
+
+        public Brush _mondayBackground
+        {
+            get { return Model.mondayBackground; }
+            set
+            {
+                Model.mondayBackground = value;
+                OnPropertyChanged();
+            }
+        }
+        public Brush _tuesdayBackground
+        {
+            get { return Model.tuesdayBackground; }
+            set
+            {
+                Model.tuesdayBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Brush _wednesdayBackground
+        {
+            get { return Model.wednesdayBackground; }
+            set
+            {
+                Model.wednesdayBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Brush _thursdayBackground
+        {
+            get { return Model.thursdayBackground; }
+            set
+            {
+                Model.thursdayBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Brush _fridayBackground
+        {
+            get { return Model.fridayBackground; }
+            set
+            {
+                Model.fridayBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Brush _saturdayBackground
+        {
+            get { return Model.saturdayBackground; }
+            set
+            {
+                Model.saturdayBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Brush _sundayBackground
+        {
+            get { return Model.sundayBackground; }
+            set
+            {
+                Model.sundayBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string _selectedDay
+        {
+            get { return Model.selectedDay; }
+            set
+            {
+                Model.selectedDay = value;
+                OnPropertyChanged();
+            }
+        }
+        public ICommand exerciseChangeColorCommand { get; set; }
+
+        public void exerciseChangeColor(object obj)
+        {
+            _selectedDay = obj.ToString();
+            switch (_selectedDay)
+            {
+                case "monday":
+                    _mondayBackground = Brushes.Gray;
+                    _tuesdayBackground = Brushes.White;
+                    _wednesdayBackground = Brushes.White;
+                    _thursdayBackground = Brushes.White;
+                    _fridayBackground = Brushes.White;
+                    _saturdayBackground = Brushes.White;
+                    _sundayBackground = Brushes.White;
+                    break;
+                case "tuesday":
+                    _mondayBackground = Brushes.White;
+                    _tuesdayBackground = Brushes.Gray;
+                    _wednesdayBackground = Brushes.White;
+                    _thursdayBackground = Brushes.White;
+                    _fridayBackground = Brushes.White;
+                    _saturdayBackground = Brushes.White;
+                    _sundayBackground = Brushes.White;
+                    break;
+                case "wednesday":
+                    _mondayBackground = Brushes.White;
+                    _tuesdayBackground = Brushes.White;
+                    _wednesdayBackground = Brushes.Gray;
+                    _thursdayBackground = Brushes.White;
+                    _fridayBackground = Brushes.White;
+                    _saturdayBackground = Brushes.White;
+                    _sundayBackground = Brushes.White;
+                    break;
+                case "thursday":
+                    _mondayBackground = Brushes.White;
+                    _tuesdayBackground = Brushes.White;
+                    _wednesdayBackground = Brushes.White;
+                    _thursdayBackground = Brushes.Gray;
+                    _fridayBackground = Brushes.White;
+                    _saturdayBackground = Brushes.White;
+                    _sundayBackground = Brushes.White;
+                    break;
+                case "friday":
+                    _mondayBackground = Brushes.White;
+                    _tuesdayBackground = Brushes.White;
+                    _wednesdayBackground = Brushes.White;
+                    _thursdayBackground = Brushes.White;
+                    _fridayBackground = Brushes.Gray;
+                    _saturdayBackground = Brushes.White;
+                    _sundayBackground = Brushes.White;
+                    break;
+                case "saturday":
+                    _mondayBackground = Brushes.White;
+                    _tuesdayBackground = Brushes.White;
+                    _wednesdayBackground = Brushes.White;
+                    _thursdayBackground = Brushes.White;
+                    _fridayBackground = Brushes.White;
+                    _saturdayBackground = Brushes.Gray;
+                    _sundayBackground = Brushes.White;
+                    break;
+                case "sunday":
+                    _mondayBackground = Brushes.White;
+                    _tuesdayBackground = Brushes.White;
+                    _wednesdayBackground = Brushes.White;
+                    _thursdayBackground = Brushes.White;
+                    _fridayBackground = Brushes.White;
+                    _saturdayBackground = Brushes.White;
+                    _sundayBackground = Brushes.Gray;
+                    break;
+                default:
+                    MessageBox.Show("lala");
+                    break;
+            
+            }
+
+        }
 
     }
 }
