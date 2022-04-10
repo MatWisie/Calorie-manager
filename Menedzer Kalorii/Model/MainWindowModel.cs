@@ -37,5 +37,12 @@ namespace Menedzer_Kalorii.Model
         public Brush saturdayBackground;
         public Brush sundayBackground;
         public string selectedDay;
+        public ObservableCollection<string> mondayList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> tuesdayList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> wednesdayList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> thursdayList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> fridayList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> saturdayList = new ObservableCollection<string>() { };
+        public ObservableCollection<string> sundayList = new ObservableCollection<string>() { };
     }
 }

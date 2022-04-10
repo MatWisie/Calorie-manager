@@ -41,6 +41,9 @@ namespace Menedzer_Kalorii.ViewModel
             removeLastItemSupperCommand = new RelayCommand(removeLastItemSupper);
             calculateCaloriesBurnedCommand = new RelayCommand(calculateCaloriesBurned);
             exerciseChangeColorCommand = new RelayCommand(exerciseChangeColor);
+            addExerciseCommand = new RelayCommand(addExercise);
+            saveExerciseCommand = new RelayCommand(saveExercise);
+            removeLastExerciseCommand = new RelayCommand(removeLastExercise);
 
             kcalDefining kcalDefining = new kcalDefining();
 
@@ -574,11 +577,181 @@ namespace Menedzer_Kalorii.ViewModel
                     _sundayBackground = Brushes.Gray;
                     break;
                 default:
-                    MessageBox.Show("lala");
                     break;
             
             }
 
+        }
+
+        public ObservableCollection<string> _mondayList
+        {
+            get
+            {
+                return Model.mondayList;
+            }
+            set
+            {
+                Model.mondayList = value;
+            }
+        }
+        public ObservableCollection<string> _tuesdayList
+        {
+            get
+            {
+                return Model.tuesdayList;
+            }
+            set
+            {
+                Model.tuesdayList = value;
+            }
+        }
+        public ObservableCollection<string> _wednesdayList
+        {
+            get
+            {
+                return Model.wednesdayList;
+            }
+            set
+            {
+                Model.wednesdayList = value;
+            }
+        }
+        public ObservableCollection<string> _thursdayList
+        {
+            get
+            {
+                return Model.thursdayList;
+            }
+            set
+            {
+                Model.thursdayList = value;
+            }
+        }
+        public ObservableCollection<string> _fridayList
+        {
+            get
+            {
+                return Model.fridayList;
+            }
+            set
+            {
+                Model.fridayList = value;
+            }
+        }
+
+        public ObservableCollection<string> _saturdayList
+        {
+            get
+            {
+                return Model.saturdayList;
+            }
+            set
+            {
+                Model.saturdayList = value;
+            }
+        }
+        public ObservableCollection<string> _sundayList
+        {
+            get
+            {
+                return Model.sundayList;
+            }
+            set
+            {
+                Model.sundayList = value;
+            }
+        }
+
+        public ICommand addExerciseCommand { get; set; }
+
+        public void addExercise(object obj)
+        {
+            switch (_selectedDay)
+            {
+                case "monday":
+                    _mondayList.Add(obj.ToString());
+                    break;
+                case "tuesday":
+                    _tuesdayList.Add(obj.ToString());
+                    break;
+                case "wednesday":
+                    _wednesdayList.Add(obj.ToString());
+                    break;
+                case "thursday":
+                    _thursdayList.Add(obj.ToString());
+                    break;
+                case "friday":
+                    _fridayList.Add(obj.ToString());
+                    break;
+                case "saturday":
+                    _saturdayList.Add(obj.ToString());
+                    break;
+                case "sunday":
+                    _sundayList.Add(obj.ToString());
+                    break;
+
+                default:
+                    _mondayList.Add(obj.ToString());
+                    break;
+            }
+
+        }
+        public ICommand saveExerciseCommand { get; set; }
+
+        public void saveExercise(object obj)
+        {
+            SaveFileDialog dialog = new SaveFileDialog()
+            {
+                Filter = "Text Files(*.txt)|*.txt|All(*.*)|*"
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                File.WriteAllText(dialog.FileName, "||||||||Menedżer Kalorii|||||||| \n\n|Poniedziałek| \n" + writeOut(_mondayList) + "\n|Wtorek|\n" + writeOut(_tuesdayList) + "\n|Środa|\n" + writeOut(_wednesdayList) + "\n|Czwartek|\n" + writeOut(_thursdayList) + "\n|Piątek|\n" + writeOut(_fridayList) + "\n|Sobota|\n" + writeOut(_saturdayList) + "\n|Niedziela|\n" + writeOut(_sundayList));
+            }
+
+        }
+
+        public ICommand removeLastExerciseCommand { get; set; }
+
+        public void removeLastExercise(object obj)
+        {
+            switch (_selectedDay)
+            {
+                case "monday":
+                    if (_mondayList.Count > 0)
+                        _mondayList.RemoveAt(_mondayList.Count - 1);
+                    break;
+                case "tuesday":
+                    if (_tuesdayList.Count > 0)
+                        _tuesdayList.RemoveAt(_tuesdayList.Count - 1);
+                    break;
+                case "wednesday":
+                    if (_wednesdayList.Count > 0)
+                        _wednesdayList.RemoveAt(_wednesdayList.Count - 1);
+                    break;
+                case "thursday":
+                    if (_thursdayList.Count > 0)
+                        _thursdayList.RemoveAt(_thursdayList.Count - 1);
+                    break;
+                case "friday":
+                    if (_fridayList.Count > 0)
+                        _fridayList.RemoveAt(_fridayList.Count - 1);
+                    break;
+                case "saturday":
+                    if (_saturdayList.Count > 0)
+                        _saturdayList.RemoveAt(_saturdayList.Count - 1);
+                    break;
+                case "sunday":
+                    if (_sundayList.Count > 0)
+                        _sundayList.RemoveAt(_sundayList.Count - 1);
+                    break;
+
+                default:
+                    if (_mondayList.Count > 0)
+                        _mondayList.RemoveAt(_mondayList.Count - 1);
+                    break;
+            }
         }
 
     }

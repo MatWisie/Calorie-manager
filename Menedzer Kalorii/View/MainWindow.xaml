@@ -197,48 +197,53 @@
                                     <GroupBox.InputBindings>
                                         <MouseBinding Gesture="LeftClick" Command="{Binding exerciseChangeColorCommand}" CommandParameter="monday"/>
                                     </GroupBox.InputBindings>
-                                    <ListView Background="{Binding _mondayBackground}"/>
+                                    <ListView Background="{Binding _mondayBackground}" ItemsSource="{Binding _mondayList}"/>
                                 </GroupBox>
                                 <GroupBox Header="Wtorek">
                                     <GroupBox.InputBindings>
                                         <MouseBinding Gesture="LeftClick" Command="{Binding exerciseChangeColorCommand}" CommandParameter="tuesday"/>
                                     </GroupBox.InputBindings>
-                                    <ListView Background="{Binding _tuesdayBackground}"/>
+                                    <ListView Background="{Binding _tuesdayBackground}" ItemsSource="{Binding _tuesdayList}"/>
                                 </GroupBox>
                                 <GroupBox Header="Środa">
                                     <GroupBox.InputBindings>
                                         <MouseBinding Gesture="LeftClick" Command="{Binding exerciseChangeColorCommand}" CommandParameter="wednesday"/>
                                     </GroupBox.InputBindings>
-                                    <ListView Background="{Binding _wednesdayBackground}"/>
+                                    <ListView Background="{Binding _wednesdayBackground}" ItemsSource="{Binding _wednesdayList}"/>
                                 </GroupBox>
                                 <GroupBox Header="Czwartek">
                                     <GroupBox.InputBindings>
                                         <MouseBinding Gesture="LeftClick" Command="{Binding exerciseChangeColorCommand}" CommandParameter="thursday"/>
                                     </GroupBox.InputBindings>
-                                    <ListView Background="{Binding _thursdayBackground}"/>
+                                    <ListView Background="{Binding _thursdayBackground}" ItemsSource="{Binding _thursdayList}"/>
                                 </GroupBox>
                                 <GroupBox Header="Piątek">
                                     <GroupBox.InputBindings>
                                         <MouseBinding Gesture="LeftClick" Command="{Binding exerciseChangeColorCommand}" CommandParameter="friday"/>
                                     </GroupBox.InputBindings>
-                                    <ListView Background="{Binding _fridayBackground}"/>
+                                    <ListView Background="{Binding _fridayBackground}" ItemsSource="{Binding _fridayList}"/>
                                 </GroupBox>
                                 <GroupBox Header="Sobota">
                                     <GroupBox.InputBindings>
                                         <MouseBinding Gesture="LeftClick" Command="{Binding exerciseChangeColorCommand}" CommandParameter="saturday"/>
                                     </GroupBox.InputBindings>
-                                    <ListView Background="{Binding _saturdayBackground}"/>
+                                    <ListView Background="{Binding _saturdayBackground}" ItemsSource="{Binding _saturdayList}"/>
                                 </GroupBox>
                                 <GroupBox Header="Niedziela">
                                     <GroupBox.InputBindings>
                                         <MouseBinding Gesture="LeftClick" Command="{Binding exerciseChangeColorCommand}" CommandParameter="sunday"/>
                                     </GroupBox.InputBindings>
-                                    <ListView Background="{Binding _sundayBackground}"/>
+                                    <ListView Background="{Binding _sundayBackground}" ItemsSource="{Binding _sundayList}"/>
                                 </GroupBox>
-                                <Button Content="ZAPISZ" Height="30" Width="70" Background="#545970" Foreground="White" FontSize="18"/>
+                                <Button Margin="15" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#545970" Foreground="White" FontWeight="Bold" FontSize="20" Command="{Binding removeLastExerciseCommand}">
+                                    <Button.Content>
+                                        <Rectangle Width="40" Height="5" Fill="White" Margin="5"/>
+                                    </Button.Content>
+                                </Button>
+                                <Button Content="ZAPISZ" Height="30" Width="70" Background="#545970" Foreground="White" FontSize="18" Command="{Binding saveExerciseCommand}" HorizontalAlignment="Left"/>
                             </UniformGrid>
                             <Menu Background="#272933" Grid.Row="1">
-                                <MenuItem Header="Bieganie" Style="{StaticResource MenuItemStyle}"/>
+                                <MenuItem Header="Bieganie" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                 <MenuItem Header="Brzuszki" Style="{StaticResource MenuItemStyle}"/>
                                 <MenuItem Header="Pompki" Style="{StaticResource MenuItemStyle}"/>
                                 <MenuItem Header="Skakanka" Style="{StaticResource MenuItemStyle}"/>
