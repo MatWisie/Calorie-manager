@@ -255,7 +255,104 @@
                     </TabItem>
                     <TabItem Header="Przepisy" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label></Label>
+                            <TabControl TabStripPlacement="Left">
+                                <TabItem Header="Babeczki bananowe" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                SKŁADNIKI NA 12 SZTUK <LineBreak/>
+                                                -1 szklanka (130g) mąki pszennej jasnej<LineBreak/>
+                                                -80g zmielonych na mąkę migdałów<LineBreak/>
+                                                -60g wiórków kokosowych<LineBreak/>
+                                                -100g suszonych daktyli drobno pokrojonych<LineBreak/>
+                                                -1 łyżeczka proszku do pieczenia<LineBreak/>
+                                                -1/2 łyżeczki sody oczyszczonej<LineBreak/>
+                                                -3 banany<LineBreak/>
+                                                -2 jajka<LineBreak/>
+                                                -3 łyżki oleju rzepakowego<LineBreak/>
+                                                <LineBreak/>
+                                                Sposób przygotowania:<LineBreak/>
+                                                W jednej misce wymieszaj suche składniki (mąkę, migdały, wiórki kokosowe, daktyle, proszek do pieczenia i sodę).<LineBreak/>
+                                                W drugiej misce zmiksuj 2 banany z jajkami i olejem.<LineBreak/>
+                                                Wymieszaj suche składniki z mokrymi.<LineBreak/>
+                                                Przełóż ciasto do foremek na babeczki (wypełnij 3/4 foremki).<LineBreak/>
+                                                Pokrój ostatniego banana i rozłóż plasterki na babeczkach.<LineBreak/>
+                                                Piecz w temp. 180 stopni C przez 35 minut.<LineBreak/>
+                                                <LineBreak/>
+                                                Wartość odżywcza jednej babeczki bananowej:<LineBreak/>
+                                                Energia: 192 kcal<LineBreak/>
+                                                Białko: 4,5 g<LineBreak/>
+                                                Tłuszcz: 10 g<LineBreak/>
+                                                Węglowodany: 24 g<LineBreak/>
+                                                Błonnik pokarmowy: 3,3 g<LineBreak/>
+
+                                               <Image Source="/Images/cupcakes.jpg" Width="400"/><LineBreak/>
+                                                Źródło: https://zdrowe-odzywianie-przepisy.blogspot.com/2021/01/pozywne-babeczki-bananowe.html#more
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid></TabItem>
+                                <TabItem Header="Plackogofy" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                Składniki na 3 porcje:<LineBreak/>
+                                                -1 kg ziemniaków<LineBreak/>
+                                                -1 marchewka<LineBreak/>
+                                                -pęczek natki pietruszki<LineBreak/>
+                                                -1 jajko<LineBreak/>
+                                                -2 łyżki mąki pszennej<LineBreak/>
+                                                -2 łyżki oleju rzepakowego<LineBreak/>
+                                                -sól, pieprz<LineBreak/>
+                                                <LineBreak/>
+                                                Sposób przygotowania:<LineBreak/>
+                                                Ziemniaki i marchew zetrzyj na małych oczkach lub użyj malaksera.<LineBreak/>
+                                                Starte warzywa odciśnij z powstałego "soku" najmocniej jak się da (przez ściereczkę lub pieluchę tetrową).<LineBreak/>
+                                                Do ziemniaczanej masy dodaj pozostałe składniki i przyprawy - wymieszaj.<LineBreak/>
+                                                Gofrownicę posmaruj kropelką oleju rzepakowego i dobrze rozgrzej.<LineBreak/>
+                                                Nakładaj ciasto i piecz każdego placka przez ok. 8 minut.<LineBreak/>
+                                                Podawaj z ulubionymi dodatkami. U mnie sos czosnkowy (serek bieluch z czosnkiem), łosoś wędzony na gorąco, ogórek kiszony.<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/waffles.jpg" Width="400"/>
+                                                <LineBreak/>
+                                                Źródło: https://zdrowe-odzywianie-przepisy.blogspot.com/2021/01/plackogofry-ziemniaczane-jeszcze.html#more
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Owsiane ciasteczka" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                Składniki na 16 sztuk: <LineBreak/>
+                                                -1,5 szklanki płatków owsianych<LineBreak/>
+                                                -1 banan<LineBreak/>
+                                                -1 marchew<LineBreak/>
+                                                -1 łyżka syropu daktylowego lub miodu<LineBreak/>
+                                                -6 łyżek rodzynek<LineBreak/>
+                                                -1 jajko<LineBreak/>
+                                                -2 łyżki nasion słonecznika<LineBreak/>
+                                                -2 garści posiekanych orzechów włoskich<LineBreak/>
+                                                <LineBreak/>
+                                                 Sposób przygotowania:<LineBreak/>
+                                                Banana zmiksuj. Marchew zetrzyj na grubych oczkach.<LineBreak/>
+                                                Wymieszaj składniki i odstaw na 15 minut.<LineBreak/>
+                                                Po tym czasie formuj łyżką ciasteczka na blaszce wyłożonej papierem do pieczenia. <LineBreak/>
+                                                Piecz w temp. 180 stopni C przez ok. 30 minut.<LineBreak/>
+                                                <LineBreak/>
+                                                Wartość odżywcza jednego ciastka: <LineBreak/>
+                                                Energia: 104 kcal<LineBreak/>
+                                                Białko: 3 g<LineBreak/>
+                                                Tłuszcz: 4 g<LineBreak/>
+                                                Węglowodany: 14 g<LineBreak/>
+                                                Błonnik pokarmowy: 1,8 g<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/cookies.jpg" Width="400"/> <LineBreak/>
+                                                Źródło: https://zdrowe-odzywianie-przepisy.blogspot.com/2019/01/owsiane-ciasteczka-marchewkowe.html#more
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                            </TabControl>
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
