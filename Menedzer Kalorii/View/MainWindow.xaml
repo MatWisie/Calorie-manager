@@ -352,6 +352,256 @@
                                         </ScrollViewer>
                                     </Grid>
                                 </TabItem>
+                                <TabItem Header="Placki z cukinii" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                Składniki na 8 porcji <LineBreak/>
+                                                -450 g cukinii <LineBreak/>
+                                                -120 g sera feta <LineBreak/>
+                                                -50 g drobnych płatków owsianych (polecam te) <LineBreak/>
+                                                -50 g groszku <LineBreak/>
+                                                -1 jajko <LineBreak/>
+                                                -2 łyżki nasion sezamu <LineBreak/>
+                                                -1/2 łyżeczki soli <LineBreak/>
+                                                -2 ząbki czosnku <LineBreak/>
+                                                -szczypta mielonego czarnego pieprzu <LineBreak/>
+                                                -rozmaryn lub koper (do smaku) <LineBreak/>
+                                                <LineBreak/>
+                                                Sposób przygotowania: <LineBreak/>
+                                                Zetrzyj cukinię na grubszych oczkach i wyciśnij jak najwięcej wody (ściereczką lub gazą). <LineBreak/>
+                                                W misce wymieszaj wyciśniętą cukinię z pokruszonym serem feta, jajkiem, płatkami owsianymi, groszkiem, sezamem, solą i pieprzem.<LineBreak/>
+                                                Nabieraj łyżką spore porcje ciasta, a następnie rozkładaj je na blasze wyłożonej papierem do pieczenia, formując mniejsze placuszki.<LineBreak/>
+                                                Piecz placki przez 25-30 minut w 200 stopniach na złoty kolor.<LineBreak/>
+                                                <LineBreak/>
+                                                Wartość odżywcza jednego placka: <LineBreak/>
+                                                Kalorie	99 Kcal<LineBreak/>
+                                                Węglowodany	7 g<LineBreak/>
+                                                Błonnik	2 g<LineBreak/>
+                                                Białko	5 g<LineBreak/>
+                                                Tłuszcz	5 g<LineBreak/>
+                                                <Image Source="/Images/pie.jpg" Width="400"/><LineBreak/>
+                                                Źródło: https://www.fitczarodziejka.pl/przepis/placki-z-cukinii-z-serem-feta
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Kurczak z batatami" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                Składniki na 5 porcji:<LineBreak/>
+                                                -1 kg piersi z kurczaka bez skóry (lub ud bez kości)<LineBreak/>
+                                                -4 łyżki miodu<LineBreak/>
+                                                -100 ml sosu sojowego<LineBreak/>
+                                                -1 łyżka oleju kokosowego<LineBreak/>
+                                                -5 ząbków czosnku<LineBreak/>
+                                                -1 cebula<LineBreak/>
+                                                -1 i 1/2 szklanki wody<LineBreak/>
+                                                -1 kg batatów<LineBreak/>
+                                                <LineBreak/>
+                                                Przygotowanie<LineBreak/>
+                                                W misce przygotuj marynatę mieszając miód, sos sojowy oraz rozgnieciony czosnek.<LineBreak/>
+                                                Włóż całe, umyte piersi (lub uda) kurczaka do marynaty, przykryj miskę folią i włóż do lodówki na co najmniej 30 minut, a najlepiej na noc. Jeżeli nie masz czasu, nie musisz długo trzymać mięsa w marynacie, i tak będzie pyszne.<LineBreak/>
+                                                Na większej patelni rozgrzej łyżkę olejku kokosowego i usmaż drobno posiekaną cebulę do zarumienienia.<LineBreak/>
+                                                Dodaj zamarynowane mięso oraz 1 i 1/2 szklanki wody, przykryj i duś przez 2 godziny co jakiś czas mieszając, aż mięso będzie miękkie.<LineBreak/>
+                                                W międzyczasie przygotuj bataty.<LineBreak/>
+                                                Umyj bataty i zrób w nich kilka dziurek nożem, następnie połóż je na blasze do pieczenia i piecz w 200 stopniach przez 40-60 minut, w zależności od ich rozmiaru.<LineBreak/>
+                                                Po upieczeniu bataty powinny być miękkie w środku, a skórka powinna łatwo odchodzić.<LineBreak/>
+                                                Przed podaniem rozdziel ("poszarp") mięso widelcem na mniejsze kawałki i podaj z obranymi batatami.<LineBreak/>
+                                                <LineBreak/>
+                                                Wartości odżywcze jednego dania: <LineBreak/>
+                                                Kalorie	490 Kcal<LineBreak/>
+                                                Węglowodany	58 g<LineBreak/>
+                                                Błonnik	7 g<LineBreak/>
+                                                Białko	50 g<LineBreak/>
+                                                Tłuszcz	5 g<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/chicken.jpg" Width="400"/><LineBreak/>
+                                                Źródło: https://www.fitczarodziejka.pl/przepis/pyszny-szarpany-kurczak-z-batatami
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Zupa z dyni" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                   Składniki na 6 porcji: <LineBreak/>
+                                                    -800 g dyni Hokkaido (po obraniu)<LineBreak/>
+                                                    -200 g marchewek<LineBreak/>
+                                                    -2 pietruszki<LineBreak/>
+                                                    -1 duża cebula<LineBreak/>
+                                                    -3 ząbki czosnku<LineBreak/>
+                                                    -1 łyżka oleju/masła <LineBreak/>
+                                                    -sól morska <LineBreak/>
+                                                    -mielony czarny pieprz<LineBreak/>
+                                                    -przyprawa curry/kurkuma<LineBreak/>
+                                                    -nasiona dyni i słonecznika (opcjonalnie)<LineBreak/>
+                                                <LineBreak/>
+                                                Przygotowanie:<LineBreak/>
+                                                Przetnij dynię na pół i piecz przez 15-20 minut w 200 stopniach aż będzie miękka.<LineBreak/>
+                                                Po upieczeniu wystudź ją, następnie obierz i wyjmij nasiona.<LineBreak/>
+                                                W dużym garnku podsmaż na gorącym oleju (lub maśle) drobno posiekaną cebulę i zmiażdżony czosnek.<LineBreak/>
+                                                Dodaj pokrojone marchewki i pietruszkę.<LineBreak/>
+                                                Podgotuj wszystko, następnie dodaj pokrojoną na mniejsze kawałki dynię.<LineBreak/>
+                                                Posól i dopraw warzywa do smaku.<LineBreak/>
+                                                Zalew warzywa wodą, aby całkowicie je zakrywała, i gotuj przez około 15 minut, aż warzywa będą miękkie.<LineBreak/>
+                                                Zmiksuj zupę blenderem ręcznym i, w razie potrzeby, dopraw.<LineBreak/>
+                                                Zupę można podawać posypaną prażonymi nasionami dyni lub innymi nasionami<LineBreak/>
+                                                <LineBreak/>
+                                                Wartości odżywcze/ 1 porcja:<LineBreak/>
+                                                Kalorie	57 Kcal<LineBreak/>
+                                                Węglowodany	8 g<LineBreak/>
+                                                Błonnik	3 g<LineBreak/>
+                                                Białko	2 g<LineBreak/>
+                                                Tłuszcz	2 g<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/pumpkinsoup.jpg" Width="400"/><LineBreak/>
+                                                Źródło: https://www.fitczarodziejka.pl/przepis/prosta-zupa-z-dyni-hokkaido
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Pizza kalafiorowa" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                Składniki:<LineBreak/>
+                                                -1 kalafior pokrojony na małe różyczki<LineBreak/>
+                                                -1 jajko<LineBreak/>
+                                                -50g startego sera<LineBreak/>
+                                                -½ łyżeczki soli morskiej<LineBreak/>
+                                                -½ łyżeczki suszonego oregano<LineBreak/>
+                                                -¼ łyżeczki mielonego czarnego pieprzu<LineBreak/>
+                                                -dodatki (do smaku)<LineBreak/>
+                                                <LineBreak/>
+                                                Przygotowanie:<LineBreak/>
+                                                W blenderze zblenduj kalafiora na małe kawałki przypominające ryż.<LineBreak/>
+                                                Przełóż zblendowanego kalafiora na patelnię i piecz około 8 minut, aż zrobi się miękki.<LineBreak/>
+                                                Kiedy kalafior zmięknie i zbrązowieje, przełóż go na ściereczkę, aby pozbyć się z niego wilgoci. Im bardziej suchy, tym lepiej.<LineBreak/>
+                                                Po odpowiednim osuszeniu kawałków kalafiora przełóż je do miski, w której znajdują się pozostałe składniki i dobrze wszystko razem wymieszaj.<LineBreak/>
+                                                Po wymieszaniu przełóż miksturę na blaszkę do pieczenia (wyłożoną papierem do pieczenia) i uformuj ciasto na kształt pizzy.<LineBreak/>
+                                                Piecz w 220 stopniach przez 15 minut — aż pizza będzie złotawa.<LineBreak/>
+                                                Następnie wyjmij pizzę z piekarnika, połóż na niej wybrane przez Ciebie składniki (przecier pomidorowy, szynkę, szpinak, kukurydzę, grzyby…) i piecz przez kolejne 7-10 minut.<LineBreak/>
+                                                <LineBreak/>
+                                                Wartości odżywcze/ 1 porcja: <LineBreak/>
+                                                Kalorie	171 Kcal<LineBreak/>
+                                                Węglowodany	9 g<LineBreak/>
+                                                Błonnik	7 g<LineBreak/>
+                                                Białko	15 g<LineBreak/>
+                                                Tłuszcz	7 g<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/pizza.jpg" Width="400"/> <LineBreak/>
+                                                Źródło: https://www.fitczarodziejka.pl/przepis/zdrowa-pizza-kalafiorowa
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Sałatka z mango" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                Składniki na 2 porcje: <LineBreak/>
+                                                -80 g kaszy gryczanej, kuskusu, bulguru lub komosy ryżowej <LineBreak/>
+                                                -1 mango<LineBreak/>
+                                                -250 g twarożku<LineBreak/>
+                                                -2 łyżki miodu (lub syropu klonowego)<LineBreak/>
+                                                -2 łyżki wiórków kokosowych <LineBreak/>
+                                                -rodzynki, orzechy (opcjonalnie) <LineBreak/>
+                                                -1/4 łyżeczki cynamonu<LineBreak/>
+                                                <LineBreak/>
+                                                Przygotowanie: <LineBreak/>
+                                                Ugotuj kaszę gryczaną, kuskus, bulgur lub komosę ryżową w wodzie, zgodnie z instrukcjami na opakowaniu.<LineBreak/>
+                                                Odcedź i pozostaw do ostygnięcia.<LineBreak/>
+                                                Dokładnie posiekaj mango i połącz je w dużej misce ze wszystkimi pozostałymi składnikami.<LineBreak/>
+                                                Sałatkę można podawać od razu lub po schłodzeniu w lodówce<LineBreak/>
+                                                <LineBreak/>
+                                                Wartości odżywcze/ 1 porcja: <LineBreak/>
+                                                Kalorie	400 Kcal<LineBreak/>
+                                                Węglowodany	65 g<LineBreak/>
+                                                Błonnik	7 g<LineBreak/>
+                                                Białko	27 g<LineBreak/>
+                                                Tłuszcz	5 g<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/salad.jpg" Width="400"/><LineBreak/>
+                                                Źródło: https://www.fitczarodziejka.pl/przepis/zdrowa-salatka-z-mango
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Placek cebulowy" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                                Składniki na 6 kawałków: <LineBreak/>
+                                                -2 duże cebule<LineBreak/>
+                                                -6 jajek<LineBreak/>
+                                                -120 g jogurtu naturalnego<LineBreak/>
+                                                -1/4 szklanki mąki kokosowej <LineBreak/>
+                                                -1/2 szklanki tartej mozzarelli<LineBreak/>
+                                                -1 łyżka oleju kokosowego <LineBreak/>
+                                                -1 łyżeczka soli morskiej<LineBreak/>
+                                                -szczypta czarnego mielonego pieprzu<LineBreak/>
+                                                -szczypta kurkumy<LineBreak/>
+                                                <LineBreak/>
+                                                Przygotowanie: <LineBreak/>
+                                                Drobno posiekaj cebulę.<LineBreak/>
+                                                Na rozgrzanej patelni podgrzej łyżkę oleju i podsmaż cebulę, aż stanie się przezroczysta.<LineBreak/>
+                                                Zmieszaj jajka z jogurtem, solą i pieprzem.<LineBreak/>
+                                                Dodaj smażoną cebulę, starty ser i mąkę kokosową (lub inną) i dokładnie wymieszaj ciasto.<LineBreak/>
+                                                Wlej ciasto do formy nasmarowanej olejem lub do formy silikonowej (o średnicy 20-25 cm).<LineBreak/>
+                                                Piecz placek cebulowy przez 40-45 minut w temperaturze 180 stopni Celsjusza, aż uzyska złoty kolor.<LineBreak/>
+                                                Pozostaw ciasto do ostygnięcia na co najmniej 10 minut przed wyjęciem z formy.<LineBreak/>
+                                                <LineBreak/>
+                                                Wartości odżywcze/ 1 kawałek:<LineBreak/>
+                                                Kalorie	162 Kcal<LineBreak/>
+                                                Węglowodany	6 g<LineBreak/>
+                                                Błonnik	4 g<LineBreak/>
+                                                Białko	12 g<LineBreak/>
+                                                Tłuszcz	8 g<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/onioncake.jpg" Width="400"/><LineBreak/>
+                                                Źródło: https://www.fitczarodziejka.pl/przepis/bezglutenowy-placek-cebulowy
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Chleb owsiany" Style="{StaticResource TabItemStyle}">
+                                    <Grid Background="Black">
+                                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                            <TextBlock Foreground="White">
+                                            Składniki na 12 kawałków: <LineBreak/>
+                                            -2 szklanki płatków owsianych <LineBreak/>
+                                            -1,5 szklanki wody<LineBreak/>
+                                            -0,5 szklanki otrębów (lub płatków) owsianych<LineBreak/>
+                                            -60 g nasion słonecznika<LineBreak/>
+                                            -60 g drobno siekanych orzechów <LineBreak/>
+                                            -4 łyżki nasion lnu <LineBreak/>
+                                            -2 łyżki nasion chia (lub maku) <LineBreak/>
+                                            -2 łyżki roztopionego oleju kokosowego <LineBreak/>
+                                            -1 łyżeczka soli morskiej<LineBreak/>
+                                             <LineBreak/>
+                                                Przygotowanie: <LineBreak/>
+                                                Wymieszaj wszystkie składniki razem.<LineBreak/>
+                                                Następnie przełóż ciasto na silikonową formę do pieczenia lub blachę wyłożoną papierem do pieczenia i odstaw na co najmniej 1 godzinę. To bardzo ważne, bo bez tego kroku chleb może się rozpadać po upieczeniu.<LineBreak/>
+                                                Następnie piecz chleb przez 40 minut w 175 stopniach Celsjusza.<LineBreak/>
+                                                Wyjmij chleb z piekarnika, odwróć go na pergaminie i piecz bez przykrycia przez kolejne 15-20 minut. Upieczony chleb powinien być chrupiący i mieć złotą skórkę.<LineBreak/>
+                                                Smakuje najlepiej na świeżo, następnego dnia polecam odgrzać go przed podaniem.<LineBreak/>
+                                                <LineBreak/>
+                                                Wartości odżywcze/ 1 kawałek<LineBreak/>
+                                                Kalorie	160 Kcal<LineBreak/>
+                                                Węglowodany	10 g<LineBreak/>
+                                                Błonnik	4 g<LineBreak/>
+                                                Białko	5 g<LineBreak/>
+                                                Tłuszcz	11 g<LineBreak/>
+                                                <LineBreak/>
+                                                <Image Source="/Images/bread.jpg" Width="400"/><LineBreak/>
+                                                Źródło: https://www.fitczarodziejka.pl/przepis/zdrowy-chleb-owsiany-bez-maki
+                                            </TextBlock>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </TabItem>
                             </TabControl>
                         </Grid>
                     </TabItem>

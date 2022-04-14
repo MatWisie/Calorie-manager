@@ -151,5 +151,26 @@
   <ItemGroup>
     <Resource Include="Images\cookies.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pumpkinsoup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\salad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onioncake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bread.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
