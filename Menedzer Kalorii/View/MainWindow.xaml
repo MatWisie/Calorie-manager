@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:Menedzer_Kalorii"
         mc:Ignorable="d"
         Name="mainWindow"
@@ -19,7 +20,17 @@
                 <TabControl TabStripPlacement="Left">
                     <TabItem Header="Aktualności" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
-                            <Label></Label>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid Background="#272933" Margin="10">
+                                <oxy:PlotView Model="{Binding bmiPlotModel}" Grid.Row="1" Margin="10" Background="Gray"/>
+                            </Grid>
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
@@ -290,7 +301,8 @@
                                                 Źródło: https://zdrowe-odzywianie-przepisy.blogspot.com/2021/01/pozywne-babeczki-bananowe.html#more
                                             </TextBlock>
                                         </ScrollViewer>
-                                    </Grid></TabItem>
+                                    </Grid>
+                                </TabItem>
                                 <TabItem Header="Plackogofy" Style="{StaticResource TabItemStyle}">
                                     <Grid Background="Black">
                                         <ScrollViewer HorizontalScrollBarVisibility="Auto">

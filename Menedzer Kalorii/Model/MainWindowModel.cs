@@ -44,5 +44,6 @@ namespace Menedzer_Kalorii.Model
         public ObservableCollection<string> fridayList = new ObservableCollection<string>() { };
         public ObservableCollection<string> saturdayList = new ObservableCollection<string>() { };
         public ObservableCollection<string> sundayList = new ObservableCollection<string>() { };
+
     }
 }

@@ -3,6 +3,8 @@ using Menedzer_Kalorii.Commands;
 using Menedzer_Kalorii.Model;
 using Menedzer_Kalorii.View;
 using Microsoft.Win32;
+using OxyPlot;
+using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -62,8 +64,22 @@ namespace Menedzer_Kalorii.ViewModel
             date = DateTime.Now.Date;
 
             _kcal = 0;
-            
+
+            bmiPlotModel = new PlotModel { Title = "BMI" };
+            bmiPlotModel.TextColor = OxyColor.FromRgb(255, 255, 255);
+            bmiPlotModel.PlotAreaBorderColor = OxyColor.FromRgb(255, 255, 255);
+            bmiPlotModel.DefaultColors = new List<OxyColor>
+            {
+            OxyColors.White,
+            };
+            bmiPlotModel.Series.Add(new LineSeries());
+            (bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(0, 0));
+            (bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(0, 0));
+            (bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(0, 0));
+
+
         }
+        public PlotModel bmiPlotModel { get; set; }
         public DateTime date
         {
             get { return Model._date; }
