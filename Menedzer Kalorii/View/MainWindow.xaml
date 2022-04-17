@@ -29,7 +29,7 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Grid Background="#272933" Margin="10">
-                                <oxy:PlotView Model="{Binding bmiPlotModel}" Grid.Row="1" Margin="10" Background="Gray"/>
+                                <oxy:PlotView Model="{Binding _bmiPlotModel}" Grid.Row="1" Margin="10" Background="Gray"/>
                             </Grid>
                         </Grid>
                     </TabItem>

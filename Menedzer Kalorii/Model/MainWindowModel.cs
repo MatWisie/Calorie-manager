@@ -1,15 +1,21 @@
-﻿using System;
+﻿using Menedzer_Kalorii.Properties;
+using OxyPlot;
+using OxyPlot.Series;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 
 namespace Menedzer_Kalorii.Model
 {
     class MainWindowModel
     {
+        
        public DateTime _date;
 
         public double _weight;
@@ -44,6 +50,46 @@ namespace Menedzer_Kalorii.Model
         public ObservableCollection<string> fridayList = new ObservableCollection<string>() { };
         public ObservableCollection<string> saturdayList = new ObservableCollection<string>() { };
         public ObservableCollection<string> sundayList = new ObservableCollection<string>() { };
+        public PlotModel bmiPlotModel;
+       public MainWindowModel()
+        {
+            bmiPlotModel = new PlotModel { Title = "BMI" };
+            bmiPlotModel.Series.Add(new LineSeries());
+            if (Settings.Default.BMI != null)
+                for (int a = 1; a <= 31; a++)
+                (bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(a, Convert.ToDouble(Settings.Default.BMI[a])));
+        }
 
+        public void saveBMI()
+        {
+            int currentDaysInMonth = DateTime.DaysInMonth(DateTime.Now.Year,DateTime.Now.Month);
+            int currentDay = DateTime.Now.Day;
+
+            if (Settings.Default.BMI == null)
+            {
+                var newList = new ArrayList();
+                for (int i = 0; i < 32; i++)
+                    newList.Add(0.0);
+                Settings.Default.BMI = newList;
+                Settings.Default.BMI[currentDay] = _bmi;
+                Settings.Default.Save();
+            }
+            else
+            {
+                if (Convert.ToDouble(Settings.Default.BMI[currentDaysInMonth]) == 0)
+                {
+                    Settings.Default.BMI[currentDay] = _bmi;
+                    Settings.Default.Save();
+                }
+                else
+                {
+                    Settings.Default.Reset();
+                    Settings.Default.BMI[currentDay] = _bmi;
+                    Settings.Default.Save();
+                }
+            }
+            
+            
+        }
     }
 }

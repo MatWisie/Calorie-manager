@@ -25,13 +25,24 @@ namespace Menedzer_Kalorii.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int bmiStatus {
             get {
-                return ((string)(this["Setting"]));
+                return ((int)(this["bmiStatus"]));
             }
             set {
-                this["Setting"] = value;
+                this["bmiStatus"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.ArrayList BMI {
+            get {
+                return ((global::System.Collections.ArrayList)(this["BMI"]));
+            }
+            set {
+                this["BMI"] = value;
             }
         }
     }

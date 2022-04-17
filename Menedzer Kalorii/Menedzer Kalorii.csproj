@@ -83,6 +83,7 @@
     </ApplicationDefinition>
     <Compile Include="Class\burnedKcalDefining.cs" />
     <Compile Include="Model\MinutesWindowModel.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="ViewModel\MinutesWindowViewModel.cs" />
     <Compile Include="View\MinutesWindow.xaml.cs">
       <DependentUpon>MinutesWindow.xaml</DependentUpon>

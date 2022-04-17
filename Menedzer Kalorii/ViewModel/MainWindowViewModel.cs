@@ -1,9 +1,11 @@
 ﻿using Menedzer_Kalorii.Class;
 using Menedzer_Kalorii.Commands;
 using Menedzer_Kalorii.Model;
+using Menedzer_Kalorii.Properties;
 using Menedzer_Kalorii.View;
 using Microsoft.Win32;
 using OxyPlot;
+using OxyPlot.Axes;
 using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
@@ -33,6 +35,8 @@ namespace Menedzer_Kalorii.ViewModel
         MainWindowModel Model = new MainWindowModel();
         public MainWindowViewModel()
         {
+            //Settings.Default.Reset();
+         
             calculateBmiCommand = new RelayCommand(CalculateBmi);
             calculateFoodKcalCommand = new RelayCommand(calculateFoodKcal);
             planMealClickCommand = new RelayCommand(planMealClick);
@@ -65,21 +69,23 @@ namespace Menedzer_Kalorii.ViewModel
 
             _kcal = 0;
 
-            bmiPlotModel = new PlotModel { Title = "BMI" };
-            bmiPlotModel.TextColor = OxyColor.FromRgb(255, 255, 255);
-            bmiPlotModel.PlotAreaBorderColor = OxyColor.FromRgb(255, 255, 255);
-            bmiPlotModel.DefaultColors = new List<OxyColor>
+            
+            _bmiPlotModel.TextColor = OxyColor.FromRgb(255, 255, 255);
+            _bmiPlotModel.PlotAreaBorderColor = OxyColor.FromRgb(255, 255, 255);
+            _bmiPlotModel.DefaultColors = new List<OxyColor>
             {
             OxyColors.White,
             };
-            bmiPlotModel.Series.Add(new LineSeries());
-            (bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(0, 0));
-            (bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(0, 0));
-            (bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(0, 0));
-
-
         }
-        public PlotModel bmiPlotModel { get; set; }
+
+        public PlotModel _bmiPlotModel {
+            get { return Model.bmiPlotModel; }
+            set
+            {
+                Model.bmiPlotModel = value;
+                OnPropertyChanged();
+            }
+        }
         public DateTime date
         {
             get { return Model._date; }
@@ -160,6 +166,11 @@ namespace Menedzer_Kalorii.ViewModel
             {
                 verdict = "Wartość: OTYŁOŚĆ SKRAJNA \n Życie takiej osoby jest zagrożone, musisz zadbać o siebie, zacząć mniej jeść i starcić wagi, w przeciwnym razie stan ten może mieć przykre konsekwencje. W razie problemów polecamy udać się do specjalisty.";
             }
+            Model.saveBMI();
+            (_bmiPlotModel.Series[0] as LineSeries).Points.Clear();
+            for (int a = 1; a <= 31; a++)
+                (_bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(a, Convert.ToDouble(Settings.Default.BMI[a])));
+            
         }
 
         public ObservableCollection<string> _foodList
