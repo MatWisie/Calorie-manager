@@ -18,7 +18,7 @@
             </Grid>
             <Grid DockPanel.Dock="Left" Background="#22242d">
                 <TabControl TabStripPlacement="Left">
-                    <TabItem Header="Aktualności" Style="{StaticResource TabItemStyle}">
+                    <TabItem Header="Home" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -29,7 +29,62 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Grid Background="#272933" Margin="10">
-                                <oxy:PlotView Model="{Binding _bmiPlotModel}" Grid.Row="1" Margin="10" Background="Gray"/>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="5*"/>
+                                </Grid.RowDefinitions>
+                                <Label Content="BMI" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <oxy:PlotView Model="{Binding _bmiPlotModel}" Margin="10" Background="Gray" Grid.Row="1"/>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="5*"/>
+                                </Grid.RowDefinitions>
+                                <Label Content="Zaplanowany posiłek" Foreground="White" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
+                                <UniformGrid Grid.Row="1">
+                                    <GroupBox Header="Śniadanie">
+                                        <ListView ItemsSource="{Binding _breakfastList}" Background="White"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Obiad" Grid.Column="1">
+                                        <ListView ItemsSource="{Binding _lunchList}" Background="White"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Kolacja">
+                                        <ListView ItemsSource="{Binding _supperList}" Background="White"/>
+                                    </GroupBox>
+                                </UniformGrid>
+                            </Grid>
+                            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="34*"/>
+                                    <RowDefinition Height="217*"/>
+                                </Grid.RowDefinitions>
+                                <Label Content="Zaplanowane ćwiczenia" Foreground="White" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" />
+                                <UniformGrid Grid.Row="1">
+                                    <GroupBox Header="Poniedziałek">
+                                        <ListView Background="White" ItemsSource="{Binding _mondayList}"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Wtorek">
+                                        <ListView Background="White" ItemsSource="{Binding _tuesdayList}"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Środa">
+                                        <ListView Background="White" ItemsSource="{Binding _wednesdayList}"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Czwartek">
+                                        <ListView Background="White" ItemsSource="{Binding _thursdayList}"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Piątek">
+                                        <ListView Background="White" ItemsSource="{Binding _fridayList}"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Sobota">
+                                        <ListView Background="White" ItemsSource="{Binding _saturdayList}"/>
+                                    </GroupBox>
+                                    <GroupBox Header="Niedziela">
+                                        <ListView Background="White" ItemsSource="{Binding _sundayList}"/>
+                                    </GroupBox>
+
+                                </UniformGrid>
+
                             </Grid>
                         </Grid>
                     </TabItem>
@@ -618,11 +673,6 @@
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
-                    <TabItem Header="Wiadomości sportowe" Style="{StaticResource TabItemStyle}">
-                        <Grid Background="#1c1e22">
-                            <Label></Label>
-                        </Grid>
-                    </TabItem>
                     <TabItem Header="Polecane" Style="{StaticResource TabItemStyle}">
                         <Grid Background="#1c1e22">
                             <Label></Label>

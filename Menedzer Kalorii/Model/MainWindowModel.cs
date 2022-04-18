@@ -53,7 +53,7 @@ namespace Menedzer_Kalorii.Model
         public PlotModel bmiPlotModel;
        public MainWindowModel()
         {
-            bmiPlotModel = new PlotModel { Title = "BMI" };
+            bmiPlotModel = new PlotModel();
             bmiPlotModel.Series.Add(new LineSeries());
             if (Settings.Default.BMI != null)
                 for (int a = 1; a <= 31; a++)
