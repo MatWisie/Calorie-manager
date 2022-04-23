@@ -184,5 +184,44 @@
   <ItemGroup>
     <Resource Include="Images\bread.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BMItab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\kcaltab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\planmeal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\burnkcal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\planexercises.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\recipes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\recommended.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\kcalblack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\burnkcalblack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\recommendedblack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\contactblack.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

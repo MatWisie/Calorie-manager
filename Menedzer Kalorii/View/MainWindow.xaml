@@ -18,7 +18,16 @@
             </Grid>
             <Grid DockPanel.Dock="Left" Background="#22242d">
                 <TabControl TabStripPlacement="Left">
-                    <TabItem Header="Home" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/home.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Home" />
+                                </StackPanel>
+                                </DataTemplate>
+                                </TabItem.HeaderTemplate>
+                            
                         <Grid Background="#1c1e22">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -34,7 +43,7 @@
                                     <RowDefinition Height="5*"/>
                                 </Grid.RowDefinitions>
                                 <Label Content="BMI" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                <oxy:PlotView Model="{Binding _bmiPlotModel}" Margin="10" Background="Gray" Grid.Row="1"/>
+                                <oxy:PlotView Model="{Binding _bmiPlotModel}" Margin="10" Background="#22242d" Grid.Row="1"/>
                             </Grid>
                             <Grid Grid.Column="1">
                                 <Grid.RowDefinitions>
@@ -59,7 +68,7 @@
                                     <RowDefinition Height="34*"/>
                                     <RowDefinition Height="217*"/>
                                 </Grid.RowDefinitions>
-                                <Label Content="Zaplanowane ćwiczenia" Foreground="White" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="30" />
+                                <Label Content="Zaplanowane ćwiczenia" Foreground="White" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
                                 <UniformGrid Grid.Row="1">
                                     <GroupBox Header="Poniedziałek">
                                         <ListView Background="White" ItemsSource="{Binding _mondayList}"/>
@@ -89,8 +98,17 @@
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
-                    <TabItem Header="BMI" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/BMItab.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="BMI" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
+                            <Image Source="/Images/bmi.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150"/>
                             <StackPanel Orientation="Vertical">
                                 <Label Foreground="White" Content="Wzrost [m]" HorizontalAlignment="Center"/>
                                 <wpfTool:DecimalUpDown Margin="250 0 250 0" Value="{Binding height, Mode=TwoWay}" Minimum="0" MaxWidth="300" Background="Black" Foreground="White"/>
@@ -103,15 +121,24 @@
                                 </Border>
                                 <TextBlock Foreground="White" Margin="0 20 0 0" Text="Kalkulator BMI (Body Mass Index) daje każdemu możliwość szybkiego i wygodego obliczenia własnego wskaźnika masy ciała. BMI obliczamy dzieląc masę ciała (w kilogramach) przez wzrost do kwadratu (w metrach). Wskaźnik ten wykorzystywany jest przede wszystkim do oceny ryzyka pojawienia się groźnych chorób: miażdżycy, choroby niedokrwiennej serca, udaru mózgu, czy nawet nowotworów. Większość tych chorób jest związana z otyłością i dlatego kalkulator BMI to tak przydatne narzędzie." TextWrapping="Wrap" FontSize="17"/>
                             </StackPanel>
-                            <Image Source="/Images/bmi.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150"/>
+                            
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Sprawdź kalorie" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/kcaltab.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Sprawdź kalorie" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="150*"/>
                                 <ColumnDefinition Width="467*"/>
                             </Grid.ColumnDefinitions>
+                            <Image Source="/Images/kcalblack.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150" Grid.Column="1"/>
                             <Rectangle Fill="#272933" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                             <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10 0 10 0">
                                 <Menu.ItemsPanel>
@@ -149,6 +176,14 @@
                         </Grid>
                     </TabItem>
                     <TabItem Header="Zaplanuj posiłek" Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/planmeal.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Zaplanuj posiłek" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -223,13 +258,22 @@
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
-                    <TabItem Header="Spalanie kalorii" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/burnkcal.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Spalanie kalorii" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
                             <Grid Background="#1c1e22">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="150*"/>
                                     <ColumnDefinition Width="467*"/>
                                 </Grid.ColumnDefinitions>
+                                <Image Source="/Images/burnkcalblack.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150" Grid.Column="1"/>
                                 <Rectangle Fill="#272933" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                 <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10 0 10 0">
                                     <Menu.ItemsPanel>
@@ -252,7 +296,15 @@
                             </Grid>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Zaplanuj ćwiczenia" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/planexercises.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Zaplanuj ćwiczenia" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="403*"/>
@@ -319,7 +371,15 @@
                             </Menu>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Przepisy" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/recipes.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Przepisy" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
                             <TabControl TabStripPlacement="Left">
                                 <TabItem Header="Babeczki bananowe" Style="{StaticResource TabItemStyle}">
@@ -673,13 +733,31 @@
                         </Grid>
                     </TabItem>
                     <TabItem IsEnabled="False" IsHitTestVisible="False"/>
-                    <TabItem Header="Polecane" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/recommended.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Polecane" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
+                            <Image Source="/Images/recommendedblack.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150"/>
                             <Label></Label>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Kontakt" Style="{StaticResource TabItemStyle}">
+                    <TabItem Style="{StaticResource TabItemStyle}">
+                        <TabItem.HeaderTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="/Images/contact.png" Width="25" Margin="0 0 5 0"/>
+                                    <TextBlock Text="Kontakt" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
+                            <Image Source="/Images/contactblack.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150"/>
                             <Label></Label>
                         </Grid>
                     </TabItem>
