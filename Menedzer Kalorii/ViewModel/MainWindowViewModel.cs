@@ -1,5 +1,4 @@
-﻿using Menedzer_Kalorii.Class;
-using Menedzer_Kalorii.Commands;
+﻿using Menedzer_Kalorii.Commands;
 using Menedzer_Kalorii.Model;
 using Menedzer_Kalorii.Properties;
 using Menedzer_Kalorii.View;
@@ -36,7 +35,7 @@ namespace Menedzer_Kalorii.ViewModel
         public MainWindowViewModel()
         {
             //Settings.Default.Reset();
-         
+
             calculateBmiCommand = new RelayCommand(CalculateBmi);
             calculateFoodKcalCommand = new RelayCommand(calculateFoodKcal);
             planMealClickCommand = new RelayCommand(planMealClick);
@@ -50,6 +49,9 @@ namespace Menedzer_Kalorii.ViewModel
             addExerciseCommand = new RelayCommand(addExercise);
             saveExerciseCommand = new RelayCommand(saveExercise);
             removeLastExerciseCommand = new RelayCommand(removeLastExercise);
+            removeLastBurnedKcalCommand = new RelayCommand(removeLastBurnedKcal);
+            removeLastKcalCommand = new RelayCommand(removeLastKcal);
+            openHyperlinkCommand = new RelayCommand(openHyperlink);
 
             kcalDefining kcalDefining = new kcalDefining();
 
@@ -69,7 +71,7 @@ namespace Menedzer_Kalorii.ViewModel
 
             _kcal = 0;
 
-            
+
             _bmiPlotModel.TextColor = OxyColor.FromRgb(255, 255, 255);
             _bmiPlotModel.PlotAreaBorderColor = OxyColor.FromRgb(255, 255, 255);
             _bmiPlotModel.DefaultColors = new List<OxyColor>
@@ -137,7 +139,7 @@ namespace Menedzer_Kalorii.ViewModel
         public ICommand calculateBmiCommand { get; set; }
         private void CalculateBmi(object obj)
         {
-            BMI = Math.Round(weight/Math.Pow(height,2),2);
+            BMI = Math.Round(weight / Math.Pow(height, 2), 2);
             if (BMI < 16)
             {
                 verdict = "Wartość: WYGŁODZENIE \n Życie takiej osoby jest zagrożone, musisz zadbać o siebie, zacząć więcej jeść i przybrać wagi. W razie problemów polecamy udać się do specjalisty.";
@@ -170,7 +172,7 @@ namespace Menedzer_Kalorii.ViewModel
             (_bmiPlotModel.Series[0] as LineSeries).Points.Clear();
             for (int a = 1; a <= 31; a++)
                 (_bmiPlotModel.Series[0] as LineSeries).Points.Add(new DataPoint(a, Convert.ToDouble(Settings.Default.BMI[a])));
-            
+
         }
 
         public ObservableCollection<string> _foodList
@@ -189,7 +191,7 @@ namespace Menedzer_Kalorii.ViewModel
         {
             get
             {
-                return Math.Round(Model.kcal,2);
+                return Math.Round(Model.kcal, 2);
             }
             set
             {
@@ -216,7 +218,7 @@ namespace Menedzer_Kalorii.ViewModel
             amountwindow.ShowDialog();
             _grams = (int)amountwindow.gramsUpDown.Value;
             _foodList.Add((string)obj + " " + _grams + " gram");
-            _kcal += kcalDefining.define((string)obj) * _grams;
+            _kcal += kcalDefining.foodKcalDefine((string)obj) * _grams;
 
         }
 
@@ -273,7 +275,7 @@ namespace Menedzer_Kalorii.ViewModel
         }
 
 
-        
+
 
         public Brush _breakfastBackground
         {
@@ -339,8 +341,8 @@ namespace Menedzer_Kalorii.ViewModel
 
         public void removeLastItemBreakfast(object obj)
         {
-            if(_breakfastList.Count > 0)
-            _breakfastList.RemoveAt(_breakfastList.Count-1);
+            if (_breakfastList.Count > 0)
+                _breakfastList.RemoveAt(_breakfastList.Count - 1);
         }
 
         public ICommand removeLastItemLunchCommand { get; set; }
@@ -387,7 +389,7 @@ namespace Menedzer_Kalorii.ViewModel
         public string writeOut(ObservableCollection<string> foodList)
         {
             string result = "";
-            foreach(string food in foodList)
+            foreach (string food in foodList)
             {
                 result += food + "\n";
             }
@@ -451,7 +453,7 @@ namespace Menedzer_Kalorii.ViewModel
             minuteswindow.ShowDialog();
             _minutes = (int)minuteswindow.gramsUpDown.Value;
             _exercisesList.Add((string)obj + " " + _minutes + " minut");
-            _burnedCalories += burnedKcalDefining.define((string)obj) * _minutes;
+            _burnedCalories += kcalDefining.burnedKcalDefine((string)obj) * _minutes;
         }
 
 
@@ -605,7 +607,7 @@ namespace Menedzer_Kalorii.ViewModel
                     break;
                 default:
                     break;
-            
+
             }
 
         }
@@ -779,6 +781,30 @@ namespace Menedzer_Kalorii.ViewModel
                         _mondayList.RemoveAt(_mondayList.Count - 1);
                     break;
             }
+        }
+
+        public ICommand removeLastBurnedKcalCommand { get; set; }
+        public void removeLastBurnedKcal(object obj) 
+        {
+            if (_exercisesList.Count > 0)
+              _exercisesList.RemoveAt(_exercisesList.Count - 1);
+        }
+
+        public ICommand removeLastKcalCommand { get; set; }
+        public void removeLastKcal(object obj)
+        {
+            if (_foodList.Count > 0)
+                _foodList.RemoveAt(_foodList.Count - 1);
+        }
+
+        public ICommand openHyperlinkCommand { get; set; }
+        void openHyperlink(object obj)
+        {
+            var sInfo = new System.Diagnostics.ProcessStartInfo(obj.ToString())
+            {
+                UseShellExecute = true,
+            };
+            System.Diagnostics.Process.Start(sInfo);
         }
 
     }

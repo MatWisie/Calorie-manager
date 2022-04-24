@@ -148,30 +148,64 @@
                                 </Menu.ItemsPanel>
                                 <MenuItem Header="Warzywa" Style="{StaticResource MenuItemStyle}">
                                     <MenuItem Header="Bakłażan" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
-                                    <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Dynia" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Fasola" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Dynia" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Fasola" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                 </MenuItem>
                                 <MenuItem Header="Owoce" Style="{StaticResource MenuItemStyle}">
-                                    <MenuItem Header="Ananas" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Awokado" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Banan" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Borówka" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Brzoskwinia" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Cytryna" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Czereśnie" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Figi" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Granat" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Grejpfrut" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Ananas" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Awokado" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Banan" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Borówka" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Brzoskwinia" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Cytryna" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Czereśnie" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Figi" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Granat" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Grejpfrut" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                </MenuItem>
+                                <MenuItem Header="Mięso" Style="{StaticResource MenuItemStyle}">
+                                    <MenuItem Header="Boczek(smażony)" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Boczek(pieczony)" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Filet z kurczaka" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Jagnięcina" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Kiełbasa" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Kotlet schabowy" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Kotlet mielony" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                </MenuItem>
+                                <MenuItem Header="Nabiał" Style="{StaticResource MenuItemStyle}">
+                                    <MenuItem Header="Feta" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Kefir" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Majonez" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Margaryna" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Masło" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Maślanka" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Mleko" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Ser" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Twaróg" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                </MenuItem>
+                                <MenuItem Header="Napoje" Style="{StaticResource MenuItemStyle}">
+                                    <MenuItem Header="Coca-cola" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Gin" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Herbata ziołowa" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Herbata cytrynowa" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Herbata cynamonowa" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Piwo" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Woda" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateFoodKcalCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                 </MenuItem>
                             </Menu>
                             <StackPanel Grid.Column="1">
                                 <ListBox Margin="20 0 20 0" Background="#272933" Foreground="White" MinHeight="300" ItemsSource="{Binding Path=_foodList}"/>
                                 <Label Content="{Binding _kcal}" Background="#272933" Foreground="White" Margin="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                                <Button Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#545970" Foreground="White" FontWeight="Bold" FontSize="20" Command="{Binding removeLastKcalCommand}">
+                                <Button.Content>
+                                    <Rectangle Width="40" Height="5" Fill="White" Margin="5"/>
+                                </Button.Content>
+                                </Button>
                             </StackPanel>
                         </Grid>
                     </TabItem>
@@ -232,24 +266,53 @@
                                     <MenuItem Header="Warzywa" Style="{StaticResource MenuItemStyle}">
                                         <MenuItem Header="Bakłażan" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                         <MenuItem Header="Brokuł" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
-                                        <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Dynia" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Fasola" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Brukselka" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Cebula" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Czosnek" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Dynia" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Fasola" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                     </MenuItem>
                                     <MenuItem Header="Owoce" Style="{StaticResource MenuItemStyle}">
-                                        <MenuItem Header="Ananas" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Awokado" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Banan" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Borówka" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Brzoskwinia" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Cytryna" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Czereśnie" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Figi" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Granat" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Grejpfrut" Style="{StaticResource MenuItemStyle}"/>
-                                        <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}"/>
+                                        <MenuItem Header="Ananas" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Awokado" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Banan" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Borówka" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Brzoskwinia" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Cytryna" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Czereśnie" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Figi" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Granat" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Grejpfrut" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Gruszka" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    </MenuItem>
+                                    <MenuItem Header="Mięso" Style="{StaticResource MenuItemStyle}">
+                                        <MenuItem Header="Boczek(smażony)" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Boczek(pieczony)" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Filet z kurczaka" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Jagnięcina" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Kiełbasa" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Kotlet schabowy" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Kotlet mielony" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    </MenuItem>
+                                    <MenuItem Header="Nabiał" Style="{StaticResource MenuItemStyle}">
+                                        <MenuItem Header="Feta" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Kefir" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Majonez" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Margaryna" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Masło" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Maślanka" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Mleko" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Ser" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Twaróg" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    </MenuItem>
+                                    <MenuItem Header="Napoje" Style="{StaticResource MenuItemStyle}">
+                                        <MenuItem Header="Coca-cola" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Gin" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Herbata ziołowa" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Herbata cytrynowa" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Herbata cynamonowa" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Piwo" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                        <MenuItem Header="Woda" Style="{StaticResource MenuItemStyle}" Command="{Binding addFoodCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                                     </MenuItem>
                                 </Menu>
                                 <Button Content="ZAPISZ" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="70" Background="#545970" Foreground="White" FontSize="18" Command="{Binding saveMealCommand}"/>
@@ -282,16 +345,27 @@
                                         </ItemsPanelTemplate>
                                     </Menu.ItemsPanel>
                                     <MenuItem Header="Bieganie" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
-                                    <MenuItem Header="Brzuszki" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Pompki" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Skakanka" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Pływanie" Style="{StaticResource MenuItemStyle}"/>
-                                    <MenuItem Header="Deska" Style="{StaticResource MenuItemStyle}"/>
+                                    <MenuItem Header="Brzuszki" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Pompki" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Skakanka" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Pływanie" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Deska" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Piłka nożna" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Piłka ręczna" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Siatkówka" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Rower" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    <MenuItem Header="Wiosłowanie" Style="{StaticResource MenuItemStyle}" Command="{Binding calculateCaloriesBurnedCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                    
                                 </Menu>
                                 <StackPanel Grid.Column="1">
                                     <ListBox Margin="20 0 20 0" Background="#272933" Foreground="White" MinHeight="300" ItemsSource="{Binding Path=_exercisesList}"/>
                                     <Label Content="Spalone kalorie:" Foreground="White" Margin="20 0 20 0"/>
                                     <Label Content="{Binding _burnedCalories}" Background="#272933" Foreground="White" Margin="20 0 20 0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                                    <Button Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#545970" Foreground="White" FontWeight="Bold" FontSize="20" Command="{Binding removeLastBurnedKcalCommand}">
+                                        <Button.Content>
+                                            <Rectangle Width="40" Height="5" Fill="White" Margin="5"/>
+                                        </Button.Content>
+                                    </Button>
                                 </StackPanel>
                             </Grid>
                         </Grid>
@@ -362,12 +436,16 @@
                             </UniformGrid>
                             <Menu Background="#272933" Grid.Row="1">
                                 <MenuItem Header="Bieganie" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
-                                <MenuItem Header="Brzuszki" Style="{StaticResource MenuItemStyle}"/>
-                                <MenuItem Header="Pompki" Style="{StaticResource MenuItemStyle}"/>
-                                <MenuItem Header="Skakanka" Style="{StaticResource MenuItemStyle}"/>
-                                <MenuItem Header="Pływanie" Style="{StaticResource MenuItemStyle}"/>
-                                <MenuItem Header="Deska" Style="{StaticResource MenuItemStyle}"/>
-
+                                <MenuItem Header="Brzuszki" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Pompki" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Skakanka" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Pływanie" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Deska" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Piłka nożna" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Piłka ręczna" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Siatkówka" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Rower" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
+                                <MenuItem Header="Wiosłowanie" Style="{StaticResource MenuItemStyle}" Command="{Binding addExerciseCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=Header}"/>
                             </Menu>
                         </Grid>
                     </TabItem>
@@ -744,7 +822,26 @@
                         </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
                             <Image Source="/Images/recommendedblack.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150"/>
-                            <Label></Label>
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                                <TextBlock Foreground="White">
+                                Należy pamiętać żeby żyć zdrowo, <LineBreak/> 
+                                    pomóc w tym może nie tylko nasz program ale także zewnętrzne źródła, <LineBreak/>
+                                    którymi podzielę się w tej kategorii. <LineBreak/>
+                                    <LineBreak/>
+                                    Pomocne strony <LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://www.codzienniefit.pl/" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}">https://www.codzienniefit.pl/</Hyperlink><LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://dietetyk.edu.pl/" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}">https://dietetyk.edu.pl/</Hyperlink><LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://www.verywellfit.com/" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}"> https://www.verywellfit.com/</Hyperlink><LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://kalkulatorkalorii.net/" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}"> https://kalkulatorkalorii.net/</Hyperlink><LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://vitalia.pl/" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}"> https://vitalia.pl/</Hyperlink><LineBreak/>
+                                    <LineBreak/>
+                                    Warto również przeszukać serwis youtube. Znaleźć porady albo ćwiczyć równo z prowadzącym.<LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://www.youtube.com/watch?v=QinN-7op8HY" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}"> https://www.youtube.com/watch?v=QinN-7op8HY</Hyperlink><LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://www.youtube.com/watch?v=LIbqNET5NSs" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}"> https://www.youtube.com/watch?v=LIbqNET5NSs</Hyperlink><LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://www.youtube.com/watch?v=0_o08y9viyM" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}"> https://www.youtube.com/watch?v=0_o08y9viyM</Hyperlink><LineBreak/>
+                                    <Ellipse Width="10" Height="10" Fill="White"/> <Hyperlink NavigateUri="https://www.youtube.com/watch?v=Bx4kD2CU-rk" Command="{Binding openHyperlinkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=NavigateUri}"> https://www.youtube.com/watch?v=Bx4kD2CU-rk</Hyperlink><LineBreak/>
+                                </TextBlock>
+                            </ScrollViewer>
                         </Grid>
                     </TabItem>
                     <TabItem Style="{StaticResource TabItemStyle}">
@@ -752,13 +849,18 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="/Images/contact.png" Width="25" Margin="0 0 5 0"/>
-                                    <TextBlock Text="Kontakt" />
+                                    <TextBlock Text="Kontakt"/>
                                 </StackPanel>
                             </DataTemplate>
                         </TabItem.HeaderTemplate>
                         <Grid Background="#1c1e22">
                             <Image Source="/Images/contactblack.png" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150"/>
-                            <Label></Label>
+                            <TextBlock Foreground="White">
+                                Formy kontaktu: <LineBreak/>
+                                - mailowo: matwisie.contact@gmail.com <LineBreak/>
+                                - github: https://github.com/MatWisie <LineBreak/>
+                                Program wykonany przez Mateusza Wisieckiego<LineBreak/>
+                            </TextBlock>
                         </Grid>
                     </TabItem>
                 </TabControl>
