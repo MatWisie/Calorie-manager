@@ -20,7 +20,7 @@ namespace Menedzer_Kalorii.Model
 
         public double _weight;
         public double _height;
-        public double? _bmi = null;
+        public double? _bmi = 0;
         public string _verdict = null;
         public ObservableCollection<string> foodList = new ObservableCollection<string>(){};
         public double kcal;
